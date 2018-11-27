@@ -1,0 +1,251 @@
+/* 版型基礎 ============ */
+
+.bovenCafeCamp{
+  font-size: 14px;
+  color: #4D4D4D;
+}
+
+.bovenCafeCamp *{
+  font-size: inherit;
+  color: inherit;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family:'PingFang TC', Arial, "Microsoft JhengHei", sans-serif;
+}
+
+.bovenCafeCamp *:hover,
+.bovenCafeCamp *:active{
+  text-decoration: none;
+}
+
+.bovenCafeCamp .text_center{
+  text-align: center;
+}
+
+.section_based{
+  max-width: 978px;
+  margin-left: auto; 
+  margin-right: auto;
+  margin-bottom: 40px; 
+}
+
+.section_based > *{
+  display: block;
+  max-width: 100%;
+  margin-left: auto; 
+  margin-right: auto; 
+  text-align: center;
+}
+
+.section_based:not(.senarios) > *:not(.section_picture):not(h1){
+  width: 76%;
+}
+
+.section_picture{
+  margin-bottom: 44px; 
+}
+
+.section_based > h1{
+  color: #000;
+  font-weight: 700;
+  margin-bottom: 1em;
+  font-size: 1.714em;
+  margin-bottom: 1.714em; 
+}
+
+.section_based > hr{
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: inherit;
+}
+
+.section_based > p{
+  text-align: justify;
+  margin-bottom: 46px; 
+  font-size: 1.142em;
+  line-height: 2em;
+  letter-spacing: 1px;
+}
+
+.section_based .dates{
+  font-size: 1em;
+  font-weight: 700;
+  letter-spacing: .4px;
+  margin-bottom: 20px;
+}
+
+.section_based .notes{
+  font-size: 0.8em;
+  text-align: left;
+}
+
+
+
+/* 特別區塊 ============ */
+
+.campaign > p{
+  text-align: center;
+}
+
+.senarios img{
+  display: block;
+}
+
+.senarios > div:not(.buttons){
+  width: 100%;
+  padding-top: 60%;
+  position: relative;
+  overflow: hidden;
+}
+
+.senarios > .buttons{
+  padding-top: 2em;
+  padding-bottom:2em;
+}
+
+.senarios > div > .tags,
+.senarios > div > img{
+  position: absolute;
+  max-width: 100%;
+}
+
+.senarios > div > img{
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.4);
+}
+
+.senarios > div > .tags{
+  z-index: 2;
+  color: #fff;
+  margin: 1em;
+}
+
+.senarios > .top_right > .tags{
+  right: 0;
+  top:0;
+  text-align: right;
+}
+
+.senarios > .bottom_left > .tags{
+  left: 0;
+  bottom:0;  
+  text-align: left;
+
+}
+
+.about > h1{
+  font-weight: 300;
+  text-align: center;
+}
+
+
+
+/* 元件 ============ */
+
+.buttons{
+  padding-top: 3.28em; /* 46px */
+  padding-bottom:3.57em;/* 50px */
+}
+
+.buttons.bg_dark{
+  background-color: #000;
+}
+
+.buttons.bg_dark *{
+  color: #fff;
+}
+
+
+.buttons a{
+  position: relative;
+  padding: 4px 6px;
+  margin: 10px;
+  border-style: solid;
+  border-width: 1.6px;
+  border-color: inherit;
+  border-radius:8px;
+  -webkit-border-radius:8px;
+  -moz-border-radius:8px;
+  -ms-border-radius:8px;
+  -o-border-radius:8px;
+}
+
+.buttons a.left::before,
+.buttons a.right::before{
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  width: 1em;
+  height: 1em;
+  border-style: solid;
+  border-width: 1px 0 0 1px;
+  border-color: inherit transparent transparent inherit;
+}
+
+.buttons a.left::before{
+  left: -1.2em;
+  transform: translateY(-50%) rotate(-45deg);
+}
+.buttons a.right::before{
+  right: -1.2em;
+  transform: translateY(-50%) rotate(135deg);
+}
+
+.buttons.solid a{
+  color: #fff;
+  padding: 8px 10px;
+  border: none;
+  background-color: #666666;
+}
+
+.icon_to_go{
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  /* padding: 6px; */
+  text-align: center;
+  vertical-align: middle;
+  margin-left: 5px;
+  border-radius: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon_to_go::before{
+  content: '';
+  display: inline-block;
+  background-color: inherit;
+  height: 0;
+  width: 0;
+  border-style: solid;
+  border-width: 3px;
+  border-color: transparent transparent transparent #000;
+  margin-left: 3px; 
+}
+
+
+@media (min-width: 768px){
+
+  .buttons a{
+    padding: 8px 12px;
+    margin: 16px;
+    border-width: 1.6px;
+    border-radius:8px;
+    -webkit-border-radius:8px;
+    -moz-border-radius:8px;
+    -ms-border-radius:8px;
+    -o-border-radius:8px;
+  }
+
+  .section_based .notes{
+    width: 40% !important;
+  }
+
+}
