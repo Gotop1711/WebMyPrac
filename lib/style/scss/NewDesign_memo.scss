@@ -1,0 +1,55 @@
+@import 'NewDesign_color_palette';
+
+._red{color:$color_empy_whiter;}
+._blue{color:#4c6fd6;}
+
+header h1{
+  text-align:center;
+  padding: 30px 0px;
+  margin-bottom:30px;
+  border-bottom:2px dashed #ccc;
+}
+
+.event_body{padding-bottom:200px;}
+
+section.memo_grid div[class*="col-"]{
+  background-color:#c0cbed;
+}
+
+section.memo_grid div[class*="col-"].hovering{
+  background-color: #6cbc85;
+}
+
+section.memo_grid .boxes{
+  color: #fff !important;
+  background-color: #4c6fd6;
+  min-height:50px;
+  border:1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding:10px;
+}
+
+#explanation{
+  height:auto;
+  width: 100%;
+  position: fixed;
+  top:auto;
+  top:inital;
+  left:0;
+  bottom:0px !important;
+  background-color: #ccc;
+  padding:10px;
+  margin-bottom:0px;
+  margin-top:50px;
+  
+  min-height: 1px;
+}
+
+#explanation h5{font-size: 16px;}
+
+#explanation ._target{
+  margin:8px 0px; 
+}

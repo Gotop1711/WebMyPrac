@@ -1,0 +1,331 @@
+/* CSS Document */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif !important; }
+
+.wrapper-row > * {
+  /* border: 1px solid #cc007e; */
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.item-bordered {
+  border: 20px solid #50e3c2;
+  width: 240px;
+  height: 200px; }
+
+.item-color-box {
+  background-color: #50e3c2;
+  width: 240px;
+  height: 200px; }
+
+.item-striped {
+  width: 240px;
+  height: 100px;
+  background: linear-gradient(135deg, #50e3c2 6.25%, transparent 6.25%, transparent 18.75%, #50e3c2 18.75%, #50e3c2 31.25%, transparent 31.25%, transparent 43.75%, #50e3c2 43.75%, #50e3c2 56.25%, transparent 56.25%, transparent 68.75%, #50e3c2 68.75%, #50e3c2 81.25%, transparent 81.25%, transparent 93.75%, #50e3c2 93.75%, #50e3c2 100%);
+  background-size: 100px 100px; }
+
+.item-title {
+  font-size: 48;
+  font-weight: 900;
+  position: relative; }
+
+.item-title::before,
+.item-title::after {
+  content: attr(data-title);
+  display: block;
+  position: absolute;
+  left: 0;
+  overflow: hidden; }
+
+.item-title.text-right::before,
+.item-title.text-right::after {
+  left: initial;
+  right: 0; }
+
+.item-title::before {
+  top: -20%;
+  color: rgba(0, 0, 0, 0.3);
+  height: 21px; }
+
+.item-title::after {
+  top: -40%;
+  color: rgba(0, 0, 0, 0.1);
+  height: 14px; }
+
+.item-txt {
+  font-size: 24;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 19.2; }
+
+.item-seq {
+  font-size: 48;
+  font-weight: 900; }
+
+.item-fig {
+  width: 480px;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%; }
+
+.item-fig-wrap {
+  background-color: rgba(34, 117, 211, 0.4); }
+
+.item-fig > img {
+  display: block;
+  max-width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.item-fig > img.vertical {
+  top: 0;
+  transform: translate(-50%, 0); }
+
+.wrapper-outter {
+  padding-left: 0;
+  padding-right: 0;
+  max-width: 960px;
+  position: relative; }
+
+#overlayGrid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 960px;
+  height: 100%;
+  background: #58a;
+  background-image: linear-gradient(white 1px, transparent 0), linear-gradient(90deg, white 1px, transparent 0);
+  background-size: 120px 100px;
+  background-attachment: scroll; }
+
+header {
+  min-height: 200px !important; }
+
+.item-content {
+  /* border: 1px solid #cc007e; */
+  min-height: 400px;
+  position: relative; }
+
+.item-content > * {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-origin: 0% 0%;
+  transition: all .5s; }
+
+.item-content.origin > * {
+  left: 0 !important;
+  top: 0 !important;
+  transform-origin: 0% 0% !important; }
+
+.row + .row ~ .row {
+  margin-top: 100px; }
+
+.item-fig-wrap {
+  max-width: 100%; }
+
+.item1 .item-title-wrap {
+  top: -5%;
+  z-index: 3; }
+
+.item1 .item-fig-wrap {
+  width: 480px;
+  height: 400px;
+  z-index: 2; }
+
+.item1 .item-seq {
+  top: 400px;
+  z-index: 3; }
+
+.item1 .item-striped {
+  top: 350px;
+  left: 60px;
+  z-index: 3; }
+
+.item1 .item-txt {
+  top: 300px;
+  left: 480px;
+  z-index: 2;
+  transform-origin: 0% 100%;
+  transform: translateY(-50%) rotateZ(90deg);
+  white-space: nowrap; }
+
+.item1 .item-bordered {
+  z-index: 1;
+  top: -50px;
+  left: 300px; }
+
+.item1 .item-color-box {
+  display: none; }
+
+.item2 .item-title-wrap {
+  top: 78%;
+  left: 50%;
+  z-index: 3; }
+
+.item2 .item-fig-wrap {
+  width: 240px;
+  height: 200px;
+  z-index: 2;
+  top: 25%;
+  left: 25%; }
+
+.item2 .item-seq {
+  top: 0;
+  left: 100%;
+  transform: translateX(-100%);
+  z-index: 3; }
+
+.item2 .item-striped {
+  display: none; }
+
+.item2 .item-txt {
+  top: calc(25% - 1em);
+  left: calc(25% - 1em);
+  z-index: 3; }
+
+.item2 .item-bordered {
+  z-index: 1;
+  top: 0;
+  left: 50%; }
+
+.item2 .item-color-box {
+  width: 240px;
+  height: 200px;
+  top: 12.5%;
+  left: 37.5%; }
+
+.item3 .item-title-wrap {
+  top: 10%;
+  left: 26%;
+  z-index: 3; }
+
+.item3 .item-fig-wrap {
+  width: 480px;
+  height: 200px;
+  z-index: 2;
+  top: 25%;
+  left: 0; }
+
+.item3 .item-seq {
+  top: 75%;
+  left: 100%;
+  z-index: 3; }
+
+.item3 .item-striped {
+  display: none; }
+
+.item3 .item-txt {
+  top: 75%;
+  left: 0;
+  width: 50%;
+  text-align: right; }
+
+.item3 .item-bordered {
+  z-index: 1;
+  top: 37.5%;
+  left: 62.5%; }
+
+.item3 .item-color-box {
+  width: 240px;
+  height: 200px;
+  top: 12.5%;
+  left: 0%; }
+
+.item4 .item-title-wrap {
+  width: 50%;
+  top: 25%;
+  left: 0;
+  z-index: 3;
+  text-align: right;
+  transform-origin: 100% 0;
+  transform: rotate(-90deg) translateY(-105%); }
+
+.item4 .item-fig-wrap {
+  width: 240px;
+  height: 400px;
+  z-index: 2;
+  top: 25%;
+  left: 100%;
+  transform: translateX(-100%); }
+
+.item4 .item-seq {
+  top: 75%;
+  left: 100%;
+  z-index: 3; }
+
+.item4 .item-striped {
+  display: none; }
+
+.item4 .item-txt {
+  width: 240px;
+  height: 50px;
+  top: 0;
+  left: 87.5%;
+  width: 50%;
+  text-align: left;
+  transform-origin: 0 0;
+  transform: rotateZ(90deg) translateX(-10%);
+  z-index: 3; }
+
+.item4 .item-bordered {
+  z-index: 1;
+  top: 0;
+  left: 37.5%; }
+
+.item4 .item-color-box {
+  display: none; }

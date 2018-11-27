@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>F2E_w1_static</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="./assests/bootstrap.css">
+  <link rel="stylesheet" href="./assests/all.css">
+  <style>
+  body {
+  background: #e1e1e1;
+}
+.banner {
+  background: #4a90e2;
+  color: #00408b;
+  font-size: 24px;
+  height: 76px;
+}
+
+.label {
+  padding-bottom: 17px;
+  padding-top: 17px;
+  cursor: pointer;
+}
+
+.label-select {
+  color: #ffffff;
+  font-weight: 500;
+  border-bottom: #00408b solid 5px;
+}
+
+/* input::placeholder {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 16px;
+} */
+
+.todo-card {
+  background: #f2f2f2;
+  border-radius: 5px;
+  margin-bottom: 8px;
+  color: #000000;
+  padding: 24px 32px;
+}
+
+.todo-editor {
+  background: #f2f2f2;
+  border-radius: 5px;
+  margin-bottom: 8px;
+  padding: 24px 32px;
+  color: #000000;
+  display: none;
+}
+
+.todo-editor > .todo-check {
+  cursor: auto;
+}
+
+.input-title {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 24px;
+  width: 85%;
+  background: transparent;
+  outline-style: none;
+  box-shadow: none;
+  border-color: transparent;
+  display: inline-flex;
+}
+
+.input-title::placeholder {
+  color: #000000;
+}
+
+.todo-detail {
+  padding: 0px 42px;
+  font-weight: 500;
+}
+
+.todo-detail > input {
+  border-color: transparent;
+}
+
+.todo-detail > textarea {
+  border-color: transparent;
+  width: 100%;
+  padding: 8px 15px;
+}
+
+.todo-detail > p {
+  padding: 22px 0px 8px;
+}
+
+.editor-button {
+  padding: 0px 15px;
+  cursor: pointer;
+  margin-top: -15px;
+  display: none;
+}
+
+.editor-button > .reset {
+  background: #ffffff;
+  color: #d0021b;
+  padding: 12px 0px;
+  border-bottom-left-radius: 5px;
+}
+
+.editor-button > .submit {
+  background: #4a90e2;
+  color: #ffffff;
+  padding: 12px 0px;
+  border-bottom-right-radius: 5px;
+}
+
+.todo-check {
+  color: #ffffff;
+  display: inline-flex;
+  cursor: pointer;
+}
+
+.todo-icon {
+  font-size: 16px;
+  color: #757575;
+  padding: 5px 0 0 42px;
+  font-weight: 400;
+}
+
+.todo-title {
+  padding-left: 16px;
+}
+
+.todo-function {
+  float: right;
+  display: inline-flex;
+}
+
+.todo-function > div {
+  padding-left: 15px;
+  cursor: pointer;
+}
+
+.todo-highlight {
+  background: #fff2dc;
+}
+
+.todo-highlight > .todo-function > .todo-star {
+  color: #f5a623;
+}
+
+.todo-done > .todo-title {
+  color: #9b9b9b;
+  text-decoration: line-through;
+}
+
+.todo-done > .todo-check {
+  color: #4a90e2;
+}
+
+.font-title {
+  font-family: "Roboto";
+  font-weight: 400;
+}
+
+.font-normal {
+  font-family: "Roboto";
+  font-weight: 500;
+}
+
+.font-italic {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-style: italic;
+  color: #c8c8c8;
+  padding: 0px 32px;
+}
+
+  </style>
+</head>
+<body>
+  <div id="app_wrapper">
+    <div class="todo_nav_wrap"><!-- bg-primary -->
+      <div class="container d-flex todo_nav">
+        <a class="col-4 active" href="#">My Tasks</a>
+        <a class="col-4" href="#">In Progress</a>
+        <a class="col-4" href="#">completed</a>
+      </div>
+    </div>
+    <!-- ============================ -->
+    <div class="todo_adder">
+      <div class="inpt_wrap"></div>
+      <div class="todo_adder_edit">
+
+          <div class="todo_item" style="background-color: #F2F2F2;">
+              <div class="item_head">
+                <div class="header_label">
+                  <input type="text">
+                  <label for="">
+                    <div class="checker"></div>
+                    <div class="title">type something here</div>
+                  </label>
+                </div>
+                <div>
+                  <i class="far fa-star"></i>
+                  <i class="fas fa-pencil-alt"></i>
+                </div>
+              </div>
+              
+            </div>
+
+        <div class="card" style="background-color: #F2F2F2;">
+          <div class="task-edit">
+            <div class="mb-3">
+              <h3 class="my-2">
+                <i class="fa fa-calendar mr-2"></i>Deadline</h3>
+              <div class="input-group">
+                <input type="date" class="form-control mr-2">
+                <input type="time" class="form-control mr-2">
+              </div>
+            </div>
+            <div class="mb-3">
+              <h3 class="my-2">
+                <i class="fa fa-file mr-2"></i>File</h3>
+              <div class="input-group">
+                <button class="btn btn-secondary">
+                  <i class="fa fa-plus"></i>
+                </button>
+              </div>
+            </div>
+            <div class="mb-3">
+              <h3 class="my-2">
+                <i class="fa fa-comment mr-2"></i>Comment</h3>
+              <div class="input-group">
+                <textarea class="form-control" placeholder="type your memo here..." rows="6"></textarea>
+              </div>
+            </div>
+          </div>
+        <div class="card-footer p-0 task-edit-actions">
+          <div class="d-flex">
+            <div class="w-50">
+              <button class="btn-block cancel p-3" type="button">
+                <i class="fas fa-times mx-2"></i>Cancel</button>
+            </div>
+            <div class="w-50">
+              <button class="btn-block save p-3" type="button">
+                <i class="fa fa-plus mx-3"></i>Add Task</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <!-- ============================ -->
+    <div class="todo_list">
+      <ul>
+        <li>
+          <div class="todo_item" style="background-color: #FFF2DC;">
+            <div class="item_head">
+              <div class="header_label">
+                <input type="text">
+                <label for="">
+                  <div class="checker"></div>
+                  <div class="title">asdfasdf</div>
+                </label>
+              </div>
+              <div>
+                <i class="fas fa-star" style="color:#f5a623"></i>
+                <i class="fas fa-pencil-alt"></i>
+              </div>
+            </div>
+            <div class="item_foot">
+              <i class="far fa-calendar-alt"></i>
+              <span class="foot_time"></span>
+              <i class="far fa-file"></i>
+              <i class="fas fa-comment-dots ml-3"></i>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="todo_item">
+            <div class="item_head">
+              <div class="header_label">
+                <input type="text">
+                <label for="" class="active">
+                  <div class="checker"></div>
+                  <div class="title">asdfasdf</div>
+                </label>
+              </div>
+              <div>
+                <i class="far fa-star"></i>
+                <i class="fas fa-pencil-alt"></i>
+              </div>
+            </div>
+            <div class="item_foot">
+              <i class="far fa-calendar-alt"></i>
+              <span class="foot_time"></span>
+              <i class="far fa-file"></i>
+              <i class="fas fa-comment-dots ml-3"></i>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="todo_item">
+            <div class="item_head">
+              <div class="header_label">
+                <input type="text">
+                <label for="">
+                  <div class="checker"></div>
+                  <div class="title">asdfasdf</div>
+                </label>
+              </div>
+              <div>
+                <i class="far fa-star"></i>
+                <i class="fas fa-pencil-alt"></i>
+              </div>
+            </div>
+            <div class="item_foot">
+              <i class="far fa-calendar-alt"></i>
+              <span class="foot_time"></span>
+              <i class="far fa-file"></i>
+              <i class="fas fa-comment-dots ml-3"></i>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="todo_item">
+            <div class="item_head">
+              <div class="header_label">
+                <input type="text">
+                <label for="">
+                  <div class="checker"></div>
+                  <div class="title">asdfasdf</div>
+                </label>
+              </div>
+              <div>
+                <i class="far fa-star"></i>
+                <i class="fas fa-pencil-alt"></i>
+              </div>
+            </div>
+            <div class="item_foot">
+              <i class="far fa-calendar-alt"></i>
+              <span class="foot_time"></span>
+              <i class="far fa-file"></i>
+              <i class="fas fa-comment-dots ml-3"></i>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="todo_item">
+            <div class="item_head">
+              <div class="header_label">
+                <input type="text">
+                <label for="">
+                  <div class="checker"></div>
+                  <div class="title">asdfasdf</div>
+                </label>
+              </div>
+              <div>
+                <i class="far fa-star"></i>
+                <i class="fas fa-pencil-alt"></i>
+              </div>
+            </div>
+            <div class="item_foot">
+              <i class="far fa-calendar-alt"></i>
+              <span class="foot_time"></span>
+              <i class="far fa-file"></i>
+              <i class="fas fa-comment-dots ml-3"></i>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

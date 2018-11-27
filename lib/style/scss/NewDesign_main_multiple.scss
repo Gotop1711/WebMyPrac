@@ -1,0 +1,26 @@
+/***
+- 備註:
+  #
+
+***/
+
+*{
+  margin: 0;
+  padding: 0;
+  color:#262626;
+  color:inherit;
+  list-style:none;
+  text-decoration: none;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  // font-family: Verdana,"微軟正黑體","Geneva",Tahoma,sans-serif;
+  // font-family: 'Proxima Nova','Helvetica Neue',Helvetica,'Microsoft YaHei',Arial,sans-serif;
+  font-family:'PingFang TC', Arial, "Microsoft JhengHei", sans-serif;
+}
+
+@import './css_multiple/NewDesign_common.css';
+@import './css_multiple/NewDesign_grid_v4.css';
+@import './css_multiple/NewDesign_events.css';

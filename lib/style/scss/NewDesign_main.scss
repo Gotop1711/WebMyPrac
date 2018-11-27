@@ -1,0 +1,46 @@
+﻿/***
+- 備註:
+  # 目前只使用以下全域選取器做所有elements的reset
+    - 如果使用 meyerweb_reset-v2.0 ; 則需加上 "box-sizing: border-box;"
+    - 如果使用 minireset.scss ; 則需修改 img 等元素的 reset; 且須消除 a 的 text-decoration
+
+***/
+
+*{
+  // margin: 0;
+  // padding: 0;
+  // color:#262626;
+  color:inherit;
+  // list-style:none;
+  text-decoration: none;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  // font-family: Verdana,"微軟正黑體","Geneva",Tahoma,sans-serif;
+  // font-family: 'Proxima Nova','Helvetica Neue',Helvetica,'Microsoft YaHei',Arial,sans-serif;
+  font-family:'PingFang TC', Arial, "Microsoft JhengHei", sans-serif;
+}
+
+/*
+  如果寫成: [ *:not(ol), *not(ul), *not(form) ]
+  則變成 [三種(:not)情況], 各自"絕對差集"的集合
+  最後三種情況都沒有排除
+
+  寫成  : [ *:not(ol):not(ul):not(form) ]
+  則是, [三種(:not)情況] "聯集" 後的 "絕對差集"
+
+*/
+*:not(ol):not(ul):not(form){
+  margin: 0;
+  padding: 0;
+}
+
+// @import '../reset_normalize/meyerweb_reset-v2.0.scss';
+
+// @import 'NewDesign_color_palette';
+
+@import 'NewDesign_grid_v4';
+@import 'NewDesign_common';
+@import 'NewDesign_events';

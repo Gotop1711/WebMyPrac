@@ -1,0 +1,68 @@
+$Kuo_green_01: rgb(125, 178, 199);
+$Kuo_blue_01: rgb(128, 159, 203);
+
+
+$color_empy: #a3002b;
+$color_empy_rich: #cd101d;
+$color_empy_dark: #ab1d33;
+$color_empy_light: #d52151;//this should be the primary color of this site
+$color_empy_light_trans: transparentize($color_empy_light, .35);
+$color_empy_whiter: #de5970;
+$color_empy_whiter_trans: rgba(245, 127, 147, 0.65);
+$color_complement: darken($Kuo_blue_01, 10%);
+$color_complement_trans:transparentize($color_complement, .55);
+$color_complement_brighter_orig: #6786d0;
+$color_complement_brighter: darken($color_complement_brighter_orig, 10%);
+$color_complement_brighter_trans: transparentize($color_complement_brighter, .6);
+
+$color_complement_grey: #5972ac;
+$color_complement_grey_b: #2c446b;
+
+$color_complement_whiter: $Kuo_green_01;
+$color_complement_whiter_b: #dfe8fb;
+$color_complement_whiter_b_2: desaturate(darken(#dfe8fb, 5%), 20);
+
+$color_black:rgb(0,0,0);
+$color_black_mid:#292929;
+$color_trans_bg_dark:transparentize($color_black, .6);
+
+$color_grey_dark:#484848;
+$color_grey_dark_2: #7c7c7c;
+
+$color_mid_grey_-1:#949494;
+$color_mid_grey_b:#bdbdbd;
+$color_mid_grey:#c7c7c7;
+$color_grey_light:#cccccc;
+
+$color_grey_light_b:#e0e0e0;
+$color_grey_light_d:#e3e3e3;
+$color_grey_light_c:#efefef;
+$color_grey_light_c_trans:transparentize($color_grey_light_c, .6);
+
+$color_grey_light_d_trans: transparentize($color_grey_light_d, .4);
+
+$color_grey_aa:#9e9e9e;
+$color_grey_bb: #7c7c7c;
+
+$color_white_01: #fafafa;
+$color_white_01_trans: transparentize($color_white_01, .4);
+
+$color_brightest: #fff;
+
+$gradients_empy_01: linear-gradient(60deg, #d52151, #7793d5, #4067c4, #d52151);
+$gradients_empy_02: linear-gradient(60deg, #d52151, #7793d5, #4067c4);
+$gradients_empy_03: linear-gradient(60deg, $Kuo_green_01, $Kuo_blue_01 );
+
+$color_admin_func_on: #3D9783;
+$color_admin_func_on_02: #BDDF59;
+// $color_admin_func_off: ;
+
+$color_admin_func_warn: #f3c362;
+
+@mixin boxShadow($color){
+  box-shadow: 0 0 0 1px $color;
+}
+
+@mixin borgrad( $c1, $c2, $angle: 155 ) {
+  border-image: linear-gradient( #{$angle}deg, $c1 0%, $c2 100%) 1 round;
+} 

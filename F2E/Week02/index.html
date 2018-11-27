@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>F2E_week02_html</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style/week02_main.css">
+
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+  <header>
+    <div class="container-fluid">
+      <div class="row bg_color_prim">
+        <div class="col-sm-4">
+          <div id="site-logo">HaveFun</div>
+        </div>
+        <div class="col-sm-6">
+          <form id="main-search" action="" method="post">
+            <label for="">
+              <i class="fa fa-search"></i>
+            </label>
+            <input type="text" class="" placeholder="Explore your own activities">
+          </form>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="conainer-fluid">
+      <div class="row">
+        <div class="col-md-5 col-xl-3">
+          <aside>
+            <form action="post">
+              <fieldset>
+                <h5>Location</h5>
+                <select class="form-control" name="" id="">
+                  <option value="001">001</option>
+                  <option value="002">002</option>
+                  <option value="003">003</option>
+                  <option value="004">004</option>
+                  <option value="005">005</option>
+                </select>
+              </fieldset>
+              <fieldset id="time_range">
+                <h5>Date</h5>
+                <label for="timer_from">from
+                  <input class="datepicker form-control" type="text">
+                </label>
+                <label for="timer_To">To
+                  <input class="datepicker form-control" type="text">
+                </label>
+              </fieldset>
+              <fieldset>
+                <h5>Categories</h5>
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="">
+                  <label class="custom-control-label" for="">all</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="">
+                  <label class="custom-control-label" for="">Entertainment</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="">
+                  <label class="custom-control-label" for="">Food</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="">
+                  <label class="custom-control-label" for="">Learning</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="">
+                  <label class="custom-control-label" for="">Outdoors</label>
+                </div>
+              </fieldset>
+            </form>
+          </aside>
+        </div>
+        <div class="col-md-7 col-xl-9">
+          <div class="main-content">
+            <div class="search_conditions">
+              <p>Showing <b>15</b> results by ...</p>
+              <div class="tag">Koahsiung <i class="far fa-times-circle"></i></div>
+              <div class="tag">Entertainment <i class="far fa-times-circle"></i></div>
+            </div>
+            <div class="my-card-wrapper">
+              <div class="my-card">
+                <div class="my-card-img"></div>
+                <div class="my-card-content">
+                  <h3 class="color_sub">Kogi Cosby sweater.</h3>
+                  <p>
+                      Donec euismod scelerisque ligula. Maecenas eu varius risus, eu aliquet arcu. Curabitur fermentum suscipit est, tincidunt mattis lorem luctus id. Donec eget massa a diam condimentum pretium. Aliquam erat volutpat. Integer ut tincidunt orci. Etiam tristique, elit ut consectetur iaculis, metus lectus mattis justo, vel mollis eros neque quis augue. Sed lobortis ultrices lacus, a placerat metus rutrum sit amet. Aenean ut suscipit justo.
+                  </p>
+                  <div class="my-card-tag">
+                    <b class="content-name ">Ethan Foster</b>
+                    <a class="content-kind btn btn-circle btn-translate--hover btn-icon mr-sm-4 scroll-me">
+                      Explore Features
+                    </a>
+                  </div>
+                  <div>
+                    <span>
+                      <i class="fas fa-map-marker-alt"></i> Kaohsiung City
+                    </span>&emsp;
+                    <span>
+                      <i class="fas fa-calendar-alt"></i> 2018/5/24 - 2018/5/31
+                    </span>
+                  </div>
+                </div>
+              </div><!-- my-card -->
+            </div>
+
+            <nav class="page-nav" aria-label="Page navigation">
+                <ul class="pagination">
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                      <span aria-hidden="true">&laquo;</span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                      <span aria-hidden="true">&raquo;</span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+
+          </div><!-- main-content -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+  </div>
+  
+<script src="./main.js"></script>
+</body>
+</html>

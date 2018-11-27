@@ -1,0 +1,128 @@
+.todo_nav_wrap {
+  background-color: #4A90E2; }
+
+.todo_nav {
+  max-width: 620px; }
+
+.todo_nav > a {
+  display: block;
+  color: #00408B;
+  line-height: 28px;
+  padding: 24px 0;
+  text-align: center;
+  font-size: 24px; }
+
+.todo_nav > a.active {
+  border-bottom: 5px solid #00408B; }
+
+@media screen and (max-width: 540px) {
+  todo_nav: 100%; }
+
+.todo_adder {
+  max-width: 620px;
+  margin: auto; }
+
+.todo_adder_edit .card {
+  border-radius: 0 5px 0 5px;
+  margin-bottom: 20px;
+  overflow: hidden; }
+
+.todo_adder .task-edit {
+  padding: 15px; }
+
+.task-edit-actions button {
+  border: none;
+  cursor: pointer; }
+
+.task-edit-actions .cancel {
+  background: white;
+  color: #D0021B;
+  font-size: 28px; }
+
+.task-edit-actions .save {
+  background-color: #4A90E2;
+  color: white;
+  font-size: 28px; }
+
+.todo_list {
+  max-width: 620px;
+  margin: auto; }
+
+.todo_list > ul,
+.todo_list > ul > li {
+  display: block;
+  text-decoration: none !important;
+  list-style: none !important; }
+
+.todo_list > ul {
+  padding-left: 0; }
+
+.todo_list > ul > li {
+  background-color: #f2f2f2;
+  margin-bottom: 10px; }
+
+.item_head {
+  display: flex;
+  padding: 24px 32px 18px 32px; }
+
+.header_label {
+  flex: 0 0 70%;
+  font-size: 24px; }
+
+.header_label input {
+  display: none; }
+
+.header_label label {
+  display: block; }
+
+.header_label label > .checker,
+.header_label label > .title {
+  display: inline-block; }
+
+.header_label label > .checker {
+  background-color: #fff;
+  position: relative;
+  width: 24px;
+  height: 24px; }
+
+.header_label label.active > .checker {
+  background-color: #4A90E2;
+  position: relative;
+  width: 24px;
+  height: 24px; }
+
+.header_label label.active > .checker:after {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 12px;
+  background: white;
+  width: 3px;
+  height: 3px;
+  box-shadow: 2px 0 0 white, 4px 0 0 white, 6px 0 0 white, 6px -2px 0 white, 6px -4px 0 white, 6px -6px 0 white, 6px -8px 0 white, 6px -10px 0 white, 6px -12px 0 white;
+  transform: rotate(45deg); }
+
+.header_label label.active > .checker + .title {
+  text-decoration: line-through; }
+
+.header_label + div {
+  flex: 0 0 30%;
+  font-size: 24px; }
+
+.header_label + div {
+  display: flex;
+  justify-content: flex-end; }
+
+.item_foot {
+  font-size: 16px;
+  padding: 0 32px 24px 72px; }
+
+@media screen and (max-width: 540px) {
+  .todo_list {
+    max-width: 100%; } }
+
+body {
+  background-break: #E1E1E1; }
+
+.completed {
+  text-decoration: line-through; }
