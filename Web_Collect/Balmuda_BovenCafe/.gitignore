@@ -1,0 +1,11 @@
+Thumbs.db
+/img_notes
+/node_modules
+.vscode
+
+#*.eot
+#*.svg
+#*.ttf
+#*.woff
+
+#*.bak*

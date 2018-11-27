@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/all.css">
+    <title>Travel Map</title>
+</head>
+
+<body>
+    <div class="container">
+        <header class="container__header">
+            <div class="header">
+                <p class="header__title">臺北市-觀光景點</p>
+                <p class="header__desc">Javascript & CSS 練習</p>   
+            </div>            
+        </header>
+        <div class="content">                         
+            <select class="content__select" id="select-area"></select>
+            <svg class="content__select--arrow">
+                <polygon fill="#42ab9e" points="5,10 0,0 10,0"></polygon>
+            </svg>
+            <div class="box-area"></div>
+            <div class="paging"></div>
+            <div class="modal">
+                <div class="modal__container">
+                    <header class="modal__header">
+                        <span class="button button--close">&times;</span>
+                        <h2 class="view-title">Modal Header</h2>
+                    </header>
+                    <div class="modal__body">
+                        <img src="" alt="" class="modal__img view-img">
+                        <p><b>景點介紹：</b><p><p class="view-content"></p>
+                        <p><b>地址：</b><span class="view-add"></span><p>                        
+                        <p><b>電話：</b><span class="view-tel"></span><p>
+                        <p><b>開放時間：</b><span class="view-time"></span><p>
+                        <p><b>鄰近捷運站：</b><span class="view-MRT"></span><p>
+                        <p><b>交通資訊：</b><p><p class="view-info"></p>
+                    </div>
+                    <footer class="modal__footer"></footer>
+                </div>
+            </div>
+
+        </div>
+        <footer class="container__footer">
+            <p class="copyright">資料來源:政府資料開放平臺</p>
+            <p class="copyright">Designed by GuaStudio.com 2017</p>
+        </footer>
+    </div>
+    <script src="js/all.js"></script>
+    <script src="js/demo_ga.js"></script>
+</body>
+
+</html>
