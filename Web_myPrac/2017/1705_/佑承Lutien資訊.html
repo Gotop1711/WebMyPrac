@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+		<title>佑承Lutien資訊</title>
+		<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"> -->
+		<!--[if lt IE 9]>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<style type="text/css">
+
+			*{
+				margin: 0;
+				padding: 0;
+				list-style:none;
+			}
+
+
+			body{
+				background-color: #828282;
+			}
+
+			.table-striped>tbody>tr:nth-of-type(odd){
+				/*background-color: #ccc;*/
+			}
+
+			table{
+				background-color: #B9DCE0;
+				width: 100%;
+				/*border-collapse: collapse;*/
+				border-spacing: 1px;
+			}
+
+			thead{
+				background-color: #008FD5;
+				color: #fff;
+			}
+
+			thead th{
+				font-weight: 300;
+				letter-spacing: 10px;
+			}
+
+			th, td{
+			border:1px solid transparent;
+			padding:10px 20px;
+			}
+
+			td{
+				height: 50px;
+			}
+
+			col{
+				background-color: #EDF7F9;
+			}
+
+
+			/* 內層寫法(一)__nested_table */
+			/*
+				.inner{padding: 0;border-width: 0;}
+
+				.inner table{
+					background-color: #ccc;
+					width: 100%;
+					height: 100%;
+					border-spacing: 0px;
+				}
+
+				.inner table col:nth-child(1){
+					background-color: #008FD5;
+				}
+
+				.inner table td{
+					height: 100%;
+					padding:10px 20px;
+					border-width: 0;
+					padding: 0;
+					text-align: center;
+				}
+			*/
+
+				.inner{padding: 0;border-width: 0;}
+
+				.inner>div{
+					width: 100%;
+					height: 100%;
+					display: flex;
+					flex-direction: row;
+					justify-content: center;
+					align-items: stretch;
+				}
+
+/*				
+				.inner>div::before,
+				.inner>div::after{
+					content:'';
+					height: 0px;
+					width: 0px;
+					display: block;
+					clear:both;
+					font-size: 0px;
+				}
+*/
+
+				.inner>div>div{
+					height: 100%;
+					/*width: 30%;*/
+					/*float: left;*/
+					/*padding:10px 20px;*/
+					box-sizing: border-box;
+  
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					box-sizing: border-box;
+				}
+
+				.inner>div>div:first-child{
+					color: #fff;
+					flex:4 10;
+					padding-left: 0;
+					padding-right: 0;
+				}
+
+				.inner>div>div:nth-child(2){
+					flex:10 4;
+				}
+
+				@media screen and (max-width: 768px){
+
+					.inner>div{
+						flex-direction: column;
+					}
+
+				.inner>div>div{
+					/*justify-content: flex-start;*/
+					/*align-items: flex-start;*/
+				}
+
+				}/* 768px */
+
+
+				.inner>div>div:first-child{
+					background-color: rgba(77,177,226,0.9);
+				}
+
+
+		</style>
+	</head>
+	<body>
+
+					<table><!-- table table-striped -->
+					  <colgroup>
+					    <col>
+					    <col>
+					    <col>
+					  </colgroup>
+						<thead>
+							<tr>					
+								<th>廠牌</th>
+								<th>優點</th>
+								<th>缺點</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr><!--class="success"  -->
+
+
+							<!-- 內層寫法(一)__nested_tabl -->
+								<!-- 
+									<td class="inner">
+										<table>
+												<col>
+												<col>
+											<tr>
+												<td>《永信》</td>
+												<td>HAC-晶亮葉黃膠囊(金盞花萃取物)</td>
+											</tr>
+										</table>
+									</td>
+								 -->
+
+							<!-- 內層寫法(二)__(a)float (b)flexbox -->
+								<td class="inner">
+									<div>
+										<div>《永信》</div>
+										<div>HAC-晶亮葉黃膠囊(金盞花萃取物)</div>
+									</div>
+								</td>
+
+								<td>
+									<div>葉黃素flora 30mg</div>
+									<div>有魚油 E</div>
+									<div>便宜120顆1360</div>
+								</td>
+								<td>
+									<div>玉米黃不足2</div>
+									<div>C+微量元素都沒有</div>
+								</td>
+							</tr>
+							<tr >
+								<td class="inner">
+									<div>
+										<div>《三多》</div>
+										<div>明亮系列-金盞花萃取物(含葉黃素)複方</div>
+									</div>
+								</td>
+								<td>
+									<div>配方最完整(本土良心)</div>
+									<div>便宜100顆950</div>
+									<div>如果比外國進口比三多便宜我不敢買</div>
+								</td>
+								<td>
+									<div>自煉葉黃素吸收度無法預估</div>
+									<div>酯化型即使是國外吸收也只有一半</div>
+									<div>魚油太少….</div>
+								</td>
+							</tr>
+							<tr >
+								<td class="inner">
+									<div>
+										<div>《飛跑》</div>
+										<div>葉黃素苜錠(現在都2代)</div>
+									</div>
+								</td>
+								<td>
+									<div>葉黃素玉米黃素都是認證來源</div>
+									<div>配方少了魚油但額外添加其他抗氧化劑</div>
+									<div>(我自己就是搭魚油吃)</div>
+									<div>廠商有檢驗成分報告!!(這很基本但很多家要不到)</div>
+								</td>
+								<td>
+									<div>沒有魚油</div>
+									<div>貴30顆/瓶</div>
+								</td>
+							</tr>
+							<tr >
+								<td class="inner">
+									<div>
+										<div>《白蘭氏》</div>
+										<div>黑醋栗+金盞花葉黃素(60錠/盒)</div>
+									</div>
+								</td>
+								<td>
+									<div>葉黃素是都floraglo</div>
+									<div>含黑醋栗,對眼睛疲勞很好</div>
+								</td>
+								<td>
+									<div>沒有很多視網膜成分</div>
+									<div>以含量來比算超貴</div>
+								</td>
+							</tr>
+							<tr >
+								<td class="inner">
+									<div>
+										<div>《統欣生技》</div>
+										<div>液態葉黃素</div>
+									</div>
+								</td>
+								<td>
+									<div>Xangold酯化型專利葉黃素15mg</div>
+									<div>中藥配方對於眼睛疲勞的恢復與循環來說很好</div>
+									<div>有蝦紅素</div>
+								</td>
+								<td>
+									<div>除葉黃素其餘未定量</div>
+									<div>方便:7-11就有,可以當外出的臨時補充</div>
+								</td>
+							</tr>
+							<tr >
+								<td class="inner">
+									<div>
+										<div>《信東》</div>
+										<div>金盞花萃取葉黃素軟膠囊</div>
+									</div>
+								</td>
+								<td>
+									<div>Xangold葉黃素30mg/Floraglo 10mg可選</div>
+									<div>家樂福有信東自己專櫃,方便找貨</div>
+								</td>
+								<td>
+									<div>是用藻類DHA而不是藻紅素太可惜</div>
+									<div>副配方成分太少</div>
+								</td>
+							<tr >
+								<td class="inner">
+									<div>
+										<div>《京都念慈菴》</div>
+										<div>高效游離型葉黃素+漢方石斛</div>
+									</div>
+								</td>
+								<td>
+									<div>Floraglo 10mg</div>
+									<div>漢方配方+AREDS2最完整</div>
+									<div>額外加入藻紅山桑DHA</div>
+									<div>愛買就有</div>
+								</td>
+								<td>
+									<div>藻紅素未定量(但已售價來說,應該不多)</div>
+									<div>這個建議搭魚油</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+
+		<!-- <script src="https://code.jquery.com/jquery.js"></script> -->
+	</body>
+</html>
+

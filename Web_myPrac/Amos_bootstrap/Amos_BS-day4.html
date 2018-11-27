@@ -1,0 +1,388 @@
+
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+		<title>Title Page</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+		<link rel="stylesheet" type="text/css" href="Amos_BS-day4.css">
+		<!--[if lt IE 9]>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+	</head>
+
+	<body>
+
+<!-- 
+
+		Note: important!!
+
+		自訂class跟格線class寫在不同div比較好;
+		但這次為求方便, 把自訂class寫在隔線上;
+		如:"my-main"
+
+-->
+
+
+		<!-- navbar========================================================================= -->
+		<nav class="navbar navbar-default" role="navigation">
+			<!-- logo區 -->
+			<a class="navbar-brand" href="#">CSS可樂</a>
+		
+			<!-- 左選單 -->
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="#">關於CSS可樂</a></li>
+				<li><a href="#">CSS教學</a></li>
+				<li><a href="#">CSS範例</a></li>
+				<li><a href="#">原創CSS</a></li>
+			</ul>
+		
+			<!-- 搜尋表單 -->
+			<form class="navbar-form navbar-left" role="search">
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="請輸入關鍵字">
+				</div>
+				<button type="submit" class="btn btn-default">搜尋</button>
+			</form>
+		
+			<!-- 右選單 -->
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#">Amos 您好</a></li>
+				<li><a href="#">登出</a></li>
+				<li><a href="#">個人設定</a></li>
+				<!-- 下拉選單 -->
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">繁體中文 <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="#">繁體中文</a></li>
+						<li><a href="#">English</a></li>
+						<li><a href="#">日本語</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+
+
+		<!-- banner========================================================================== -->
+		<!-- 要做非滿版;所以反過來用conainer包住jumbotron -->
+		<div class="banner">
+			<div class="container">
+			  <div class="jumbotron text-center">
+			    <h1>哈囉～哩後!</h1>
+				  <p>csscoke是一個專門分享CSS技術的地方，此外也會提供一些網頁設計相關的知識與訊息，歡迎加入 http://csscoke.com/</p>
+				  <p><a class="btn btn-primary btn-lg" href="#" role="button">詳細內容</a></p>
+			  </div>
+			</div>
+		</div>
+
+		<!-- banner(裡的jumotron)跟welcome間有空間;找上面的物件來處理 -->
+
+
+		<!-- welcome ===================================================================== -->
+		<div class="welcome">
+			<div class="container">
+				<div class="row">
+					<div class="my-main col-xs-12 col-sm-8 col-sm-offset-2">
+					<!-- col-sm-offset-2 將8欄寬的h1推向中央 -->
+					<!-- 用my-main做整個區塊底色白色 -->
+
+						<!-- welcome_標題 -->
+						<div class="title">
+						<!-- 加class="title"用來方便控制h1 -->
+							<h1>Welcome to the leading Lawn Care compny</h1>
+						</div>
+
+
+						<!-- welcome_兩欄內文 -->
+						<div class="row _texts"> <!-- 抵銷外圍區域 -->
+							<div class="col-xs-12 col-sm-6">
+								<div class="text">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus earum, alias beatae sed iusto eveniet ex. Quisquam ab voluptatum non.</p>
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-6">
+								<div class="text">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos sed voluptate nihil nesciunt, qui ipsum quos error assumenda a molestiae.</p>
+								</div>
+							</div>
+						</div> <!-- 8欄title下方row -->
+
+
+
+						<!-- welcome_icon文字 -->
+						<div class="row _icons">
+							<div class="col-xs-12 col-sm-2 col-sm-offset-1">
+							5555
+								<div class="item text-center">
+									<img src="https://api.fnkr.net/testimg/60x60/00CED1/FFF/?text=icon" class="img-circle">
+									<p>Lorem ipsum dolor sit amet, consectetur.</p>
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-2">
+							5555
+								<div class="item text-center">
+									<img src="https://api.fnkr.net/testimg/60x60/00CED1/FFF/?text=icon" class="img-circle">
+									<p>Lorem ipsum dolor sit amet, consectetur.</p>
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-2">
+							5555
+								<div class="item text-center">
+									<img src="https://api.fnkr.net/testimg/60x60/00CED1/FFF/?text=icon" class="img-circle">
+									<p>Lorem ipsum dolor sit amet, consectetur.</p>
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-2">
+							5555
+								<div class="item text-center">
+									<img src="https://api.fnkr.net/testimg/60x60/00CED1/FFF/?text=icon" class="img-circle">
+									<p>Lorem ipsum dolor sit amet, consectetur.</p>
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-2">
+							5555
+								<div class="item text-center">
+									<img src="https://api.fnkr.net/testimg/60x60/00CED1/FFF/?text=icon" class="img-circle">
+									<p>Lorem ipsum dolor sit amet, consectetur.</p>
+								</div>
+							</div>
+						</div> <!-- welcome_icon文字 -->
+					</div>
+				</div> <!-- row -->
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!--seasonal ================================================================ -->
+		<div class="seasonal">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12">
+						<div class="title text-center">
+							<h1>seasonal</h1>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-3">
+						<div class="item text-center">
+							<div class="pic">
+								<img src="https://api.fnkr.net/testimg/400x300/00CED1/FFF/?text=img+placeholder" class="img-responsive">
+							</div>
+							<h3>Lorem ipsum dolor.</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut deleniti cum esse odit eveniet voluptatum numquam ullam praesentium a illo.</p>
+							<p><a href="#" class="btn btn-default">More</a></p>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-3">
+						<div class="item text-center">
+							<div class="pic">
+								<img src="https://api.fnkr.net/testimg/400x300/00CED1/FFF/?text=img+placeholder" class="img-responsive">
+							</div>
+							<h3>Lorem ipsum dolor.</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil perferendis dicta, dolorum enim accusamus ratione! At excepturi dignissimos, rem cum.</p>
+							<p><a href="#" class="btn btn-default">More</a></p>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-3">
+						<div class="item text-center">
+							<div class="pic">
+								<img src="https://api.fnkr.net/testimg/400x300/00CED1/FFF/?text=img+placeholder" class="img-responsive">
+							</div>
+							<h3>Lorem ipsum dolor.</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste voluptates beatae laboriosam aut quas modi minus assumenda vel accusamus ratione!</p>
+							<p><a href="#" class="btn btn-default">More</a></p>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-3">
+						<div class="item text-center">
+							<div class="pic">
+								<img src="https://api.fnkr.net/testimg/400x300/00CED1/FFF/?text=img+placeholder" class="img-responsive">
+							</div>
+							<h3>Lorem ipsum dolor.</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam ut officiis accusamus porro eaque sint assumenda in magnam amet vitae.</p>
+							<p><a href="#" class="btn btn-default">More</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+		<!-- b-a =========================================================================== -->
+		<div class="b-a">
+			<div class="container">
+				<div class="row">
+					<div class="my-main col-xs-12 col-sm-8 col-sm-offset-2">
+					<h1>BEFORE AND AFTER</h1>
+					<div class="row">
+						<div class="col-xs-12 col-sm-7">
+							<div class="pic">
+								<img src="https://api.fnkr.net/testimg/600x300/CCCCCC/FFF/" class="img-responsive">
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-5">
+							<div class="text">
+								<h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, voluptatibus!</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi quae quod maiores voluptas voluptate vitae vel cumque iste ipsam, deleniti alias ex excepturi eveniet fugit obcaecati, saepe. Odio, natus, laudantium?</p>
+								<p><a href="#" class="more">MORE<i class="glyphicon glyphicon-menu-right"></i></a></p>
+							</div>
+						</div>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- about ====================================================================== -->
+
+		<div class="about">
+			<div class="container">
+				<div class="row">
+					<div class="my-main col-xs-12 col-sm-8 col-sm-offset-2">
+						<h1>What people say about us?</h1>
+						<div class="row">
+							<div class="col-xs-12 col-sm-1">
+								<div class="pic">
+									<img src="https://api.fnkr.net/testimg/30x30/00CED1/FFF/">
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-11">
+								<div class="text">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum nisi possimus aut, eaque quidem minus at ipsam quibusdam saepe magni, error sapiente labore reprehenderit deserunt eligendi reiciendis? Beatae, exercitationem iure!</p>
+								</div>
+								<div class="people">
+									<img src="https://api.fnkr.net/testimg/50x50/00CED1/FFF/">
+									<a href="#">Graham</a>
+								</div>
+							</div>
+						</div> <!-- my-main_row -->
+
+						<div class="row">
+							<ul class="pager">
+							  <li><a href="#"><i class="glyphicon glyphicon-chevron-left"></i></a></li>
+							  <li><a href="#"><i class="glyphicon glyphicon-chevron-right"></i></a></li>
+							</ul>
+						</div>
+
+					</div> <!-- my-main -->
+				</div> <!-- row -->
+			</div>
+		</div>
+
+
+
+
+		<!-- ============================================================================= -->
+
+<!-- 
+		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14465.613951227844!2d121.53129089999999!3d24.98640205!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346801f9408c0863%3A0xb8dabcb2612b9c36!2sDapinglin!5e0!3m2!1sen!2stw!4v1486288479444" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+ -->
+
+		<div class="map">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12">
+						<!-- 4:3 aspect ratio -->
+						<div class="embed-responsive embed-responsive-16by9">
+						  <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14465.613951227844!2d121.53129089999999!3d24.98640205!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346801f9408c0863%3A0xb8dabcb2612b9c36!2sDapinglin!5e0!3m2!1sen!2stw!4v1486288479444" frameborder="0" style="border:0" allowfullscreen></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- footer ===================================================================== -->
+
+		<div class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="my-main col-xs-12 col-sm-8 col-sm-offset-2">
+						<div class="row">
+						<!-- 做一10欄區塊, offset1欄;製造左右空隙 -->
+ 						<div class="col-xs-12 col-sm-10 col-sm-offset-1">
+ 							<h1>LAWN CARE</h1>
+							<div class="col-xs-12 col-sm-4">
+								<div class="item contact">
+									<h3>contact</h3>
+									<ul class="list-unstyled">
+										<li>phone:123456-457</li>
+										<li>phone:123456-457</li>
+										<li>phone:123456-457</li>
+										<li>phone:123456-457</li>
+										<li>phone:123456-457</li>
+									</ul>						
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-4">
+								<div class="item menu">
+									<h3>menu</h3>
+									<ul class="list-unstyled">
+										<li><a href="#">home</a></li>
+										<li><a href="#">about</a></li>
+										<li><a href="#">service</a></li>
+										<li><a href="#">link</a></li>
+										<li><a href="#">link</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-4">
+								<div class="item social">
+									<h3>social</h3>
+									<ul class="list-inline">
+						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="#"><i class="fa fa-youtube"></i></a></li>
+						<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+									</ul>
+									<h3>Still Have</h3>
+									<a href="#" class="btn btn-default">SEND</a>
+								</div>
+							</div> 							
+ 						</div>
+							<!--copyright區域,做一滿版區塊; 在" my-main_row"下方做一row,放入滿版區塊也行-->
+							
+							<div class="col-xs-12 col-sm-12">
+								<div class="copyright">
+									&copy; copyright by Graham
+								</div>
+							</div>
+
+						</div> <!-- my-main_row -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</body>
+</html>
+

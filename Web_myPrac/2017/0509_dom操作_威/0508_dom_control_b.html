@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>0508_dom_control_b</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<style type="text/css">
+
+		*{
+			margin: 0;
+			padding: 0;
+			list-style:none;
+		}
+
+		table{
+			background-color: #50CA92;
+
+		}
+
+		tr, th, td{
+			outline: .5px solid #fff;
+		}
+
+		tr>*{
+			padding: 10px 5px;
+			text-align: center;
+		}
+
+
+
+		.add_photo{
+			width: 200px;
+			height: 70px;
+			background-color: #88B250;
+			cursor: pointer;
+		}
+
+
+		._delete{
+			width: 50px;
+			height: 50px;
+			background-color: #C0734C;
+			cursor: pointer;
+		}
+
+	</style>
+
+</head>
+<body>
+
+
+<form id="AAA">
+	
+	<table>
+		<thead>
+			<tr>
+				<th>排序</th>
+				<th>圖片</th>
+				<th>標題</th>
+				<th>內容</th>
+				<th>連結</th>
+				<th>刪除</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="_row">
+				<td></td>
+				<td>
+					<div class="add_photo"></div>
+				</td>
+				<td></td>
+				<td></td>
+				<td>
+					<div>
+						  <input type="text" name="" id="" value="" />
+					</div>
+					<div style="display: inline-block;">
+						  <label for="">本頁</label>
+						  <input type="radio" name="" id="" value="" />
+					</div>
+					<div style="display: inline-block;">
+						  <label for="">新視窗</label>
+						  <input type="radio" name="" id="" value="" />
+					</div>
+				</td>
+				<td>
+					<div class="_delete"></div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+</form>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript">
+	
+$(function(){
+
+	var	_AAA = jQuery('#AAA'),
+		_add_photo = jQuery('.add_photo'),
+		__delete = jQuery('._delete'),
+		_row = jQuery('._row'),
+		_clean_row = _row.clone();
+
+
+
+	jQuery('#AAA').on('click', '.add_photo', _adding);//on
+
+
+	function _adding(){
+	var _row = jQuery('._row'),
+		_last_row = _row.last(),
+		_last_row = _last_row.css({'background-color':'#CAAE50'}),
+
+		vvv = '';
+
+
+		_clean_row.clone(true).insertAfter(_last_row);
+	}//_adding
+
+
+	jQuery('#AAA').on('click', '._delete', _deleting);//on
+
+
+	function _deleting(){
+	var _row_counts = jQuery('._row').length;
+
+		if(_row_counts > 1){jQuery(this).closest('._row').remove();}
+
+	};//_deleting
+
+
+
+});//ready
+
+</script>
+</body>
+</html>

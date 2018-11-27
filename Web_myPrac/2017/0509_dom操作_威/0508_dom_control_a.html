@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>0508_dom_control_a</title>
+
+</head>
+<body>
+
+	<!-- Snoopy示範  -->
+
+	<div id="main" style="padding:20px;margin-bottom:100px;">
+	    <div class="item">Default</div>
+	</div>
+	<input value="add new" type="button">
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript">
+	
+$(function(){
+
+
+	//綁定的物件改為item的父層元素$('#main')，若沒有父層可直接綁定$(document)即可
+	$('#main').on('click', '.item', function(){
+	    console.log('Clicked');
+	});
+	//點擊按鈕動態產生一個div方塊
+	$(':button').on('click', function(){
+	    var item = '<div class="item">New</div>';
+	    $('#main').append(item);
+	});
+
+
+});//ready
+
+</script>
+</body>
+</html>

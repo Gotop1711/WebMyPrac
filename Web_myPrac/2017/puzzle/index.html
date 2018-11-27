@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #slider-puzzle {
+            width: 480px;
+            height: 480px;
+            border: 10px solid #aaa;
+        }
+        
+        .pic-single {
+            width: calc(480px / 3);
+            height: calc(480px / 3);
+            border: 1px solid #fff;
+            border-right: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            box-sizing: border-box;
+            float: left;
+            overflow: hidden;
+        }
+        
+        .pic-single {
+            background-color: #ccc;
+            box-shadow: inset 0px 0px 50px 5px #666;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="slider-puzzle">
+
+    </div>
+
+</body>
+<!-- jQuery JS 3.1.0 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function() {
+        // 座標
+        var posConv = {};
+        //填入9張圖
+
+        /* http://www.daimto.com/wp-content/uploads/2015/08/Google-Developers-rectangle.png */
+
+        for (var i = 0; i < 9; i++) {
+            $("#slider-puzzle").append("<div class='pic-single' id='pic" + i + "'><img src='https://canterburyculture.org/wp-content/uploads/2017/05/cathedral-1596047_1280-920x640.jpg' /></div>");
+            var row = parseInt(i / 3);
+            var col = i % 3;
+            $("#pic" + i + " img").css("margin-left", col * -160).css("margin-top", row * -160);
+            posConv[i] = {
+                row: row,
+                col: col
+            };
+        }//for
+
+        console.log(posConv);
+
+        $("#pic0 img").remove();
+
+        function getNearPos(i) {
+            var pool = [];
+            var row = posConv[i].row,
+                col = posConv[i].col;
+
+                console.log('row'+row+'; '+'col'+col);
+
+            //toCheck用來放入待比對的對象
+            if (row > 0) //上
+                pool.push((row - 1) * 3 + col);
+            if (row < 3) //下
+                pool.push((row + 1) * 3 + col);
+            if (col > 0) //左
+                pool.push(i - 1);
+            if (col < 3) //右
+                pool.push(i + 1);
+
+            console.log('pool :'+pool);
+            return pool;
+        }
+
+        $(".pic-single").click(function() {
+            //找尋上下左右有沒有Pic0，有則可以與它交換位置
+            //先找出元素是16個中第幾個?
+            var cells = $("#slider-puzzle div");
+            var i = cells.index(this);
+            var toCheck = getNearPos(i);
+            while (toCheck.length > 0) {
+                var j = toCheck.pop();
+                if (cells.eq(j).attr("id") == "pic0") //為空白格，交換位子
+                {
+                    //排序，必要時對調，讓i < j
+                    if (i > j) {
+                        var k = j;
+                        j = i;
+                        i = k;
+                    }
+                    var ahead = cells.eq(i);
+                    var behind = cells.eq(j);
+                    var behindPrev = behind.prev();
+                    //左右對調
+                    if (Math.abs(i - j) == 1)
+                        behind.after(ahead);
+                    else //上下對調
+                    {
+                        ahead.after(behind);
+                        behindPrev.after(ahead);
+                    }
+                    break;
+                }
+            }
+        });
+
+
+        $(document).ready(function() {
+
+            var toMove;
+            var cells = $("#slider-puzzle div");
+
+                toMove = getNearPos(cells.index($("#pic0")[0]));
+                console.log(toMove);
+/*
+
+            for (var i = 0; i < 30; i++) {
+                var cells = $("#slider-puzzle div");
+
+                //找出空格所在位置，並取得其相鄰圖塊
+
+                // toMove = getNearPos(cells.index($("#pic0")[0]));
+                // console.log(toMove);
+
+
+                cells.eq(toMove[ //由空格的相鄰圖塊擇一挪動
+                    parseInt(Math.random() * toMove.length)
+                ]).click();
+
+
+            }//for
+*/
+
+/*
+                console.log(cells.eq(toMove[
+                    parseInt(Math.random() * toMove.length)
+                ]));
+*/
+
+                cells.eq(toMove[
+                    parseInt(Math.random() * toMove.length)
+                ]).click();
+
+
+
+        });//ready
+
+
+
+    });//$
+</script>
+
+</html>

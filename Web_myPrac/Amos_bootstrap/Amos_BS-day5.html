@@ -1,0 +1,536 @@
+
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+		<title>170201_Amos_BS-test</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+		<!--[if lt IE 9]>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<style type="text/css">
+			.pt60{padding-top: 60px;}
+			.pb60{padding-bottom: 60px;}
+
+
+			.navbar{
+				margin-bottom:0;
+				background-color: hsla(214, 58%, 12%, 0.7);
+			}
+			.num{
+				background-color: #FDAD2A;
+			}
+			.num .item{
+				/*background-color: #f0f;*/
+			}
+
+
+
+/* 
+			.num .my-item-col{
+				border-left:1px solid #fff;
+				border-right:1px solid #fff;
+			}
+			.num .my-item-col + .my-item-col{
+				border-left: none;
+			}
+
+ */
+
+			.num .my-item-col + .my-item-col{
+				border-top: 1px solid #fff;
+			}
+
+
+			@media screen and (min-width:768px){
+				.num .my-item-col{
+					border-right:1px solid #fff;
+				}
+				.num .my-item-col:first-child{
+					border-left:1px solid #fff;
+				}
+			}
+
+
+			.data{
+				background-color: #f5f5f5;
+			}
+			
+			.blog .item .list-inline .glyphicon,
+			.blog .item .more{color: #faa939;}
+
+
+			.plan{background-color: #f5f5f5;}
+
+			.plan .price{
+				font-size: 70px;
+			}
+
+			.plan .item{
+				background-color: #fff;
+				border-radius: 6px;
+				padding-top: 20px;
+			}
+
+			.plan .item .list-group .list-group-item:first-child{
+				border-radius: 0;
+			}
+
+			.plan .item .list-group .list-group-item{
+				border-left: none;
+				border-right: none;
+			}
+
+			.plan .price::before{
+				content:'$';
+				font-size: 15px;
+				position: relative;
+				top: -2.5em;
+			}
+			.plan .price::after{
+				content:'/mo';
+				font-size: 15px;
+			}
+
+			@media screen and (min-width:768px){
+				.service .item-left{
+					text-align: right;
+				}
+			}
+
+
+
+		</style>
+	</head>
+	<body>
+		
+		<!-- nav ================================================================================ -->
+
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+						<span class="sr-only">選單切換</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">CSS可樂</a>
+				</div>
+						
+				<!-- 手機隱藏選單區 -->
+				<div class="collapse navbar-collapse navbar-ex1-collapse">
+					<!-- 右選單 -->
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">News</a></li>
+						<li><a href="#">Events</a></li>
+						<li><a href="#">Service</a></li>
+						<li><a href="#">Contact us</a></li>
+
+					</ul>
+				</div>
+				<!-- 手機隱藏選單區結束 -->
+			</div> <!-- container -->
+		</nav>
+
+
+
+
+
+
+
+		<!-- banner ================================================================================ -->
+		<div class="banner">
+			<div class="jumbotron">
+			  <div class="container">
+			    <h1>哈囉～哩後!</h1>
+				  <p>csscoke是一個專門分享CSS技術的地方，此外也會提供一些網頁設計相關的知識與訊息，歡迎加入 http://csscoke.com/</p>
+				  <p><a class="btn btn-primary btn-lg" href="#" role="button">詳細內容</a></p>
+			  </div>
+			</div>
+		</div>		
+
+
+
+
+
+
+
+
+
+
+		<!-- information ================================================================================ -->
+		<div class="information pt60 pb60">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-4">
+						<div class="item">
+							<h2>title</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nesciunt in repellendus reiciendis distinctio impedit, mollitia ducimus voluptatibus expedita itaque, numquam eum repellat, recusandae harum quaerat velit, nihil vero beatae!</p>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-4">
+						<div class="item">
+							<h2>title</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci velit, vitae quo sunt vero accusamus eligendi quibusdam praesentium! Eligendi quod dolorem officia aliquam? Eaque voluptatibus, temporibus non laboriosam, ipsum numquam.</p>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-4">
+						<div class="item">
+							<h2>title</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam alias nam hic odio nihil culpa commodi labore facilis dolorum voluptate deserunt officiis, dicta ducimus doloremque iusto perspiciatis saepe. Vitae, nihil.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+		<!-- num ================================================================================ -->
+		<div class="num">
+			<div class="container">
+				<div class="row">
+					<div class="my-item-col col-xs-12 col-sm-3">
+						<div class="item text-center pt60 pb60">
+							<div class="txt">100</div>
+							<div class="txt2">Lorem ipsum dolor sit amet.</div>
+						</div>
+					</div>
+					<div class="my-item-col col-xs-12 col-sm-3">
+						<div class="item text-center pt60 pb60">
+							<div class="txt">100</div>
+							<div class="txt2">Lorem ipsum dolor sit amet.</div>
+						</div>
+					</div>
+					<div class="my-item-col col-xs-12 col-sm-3">
+						<div class="item text-center pt60 pb60">
+							<div class="txt">100</div>
+							<div class="txt2">Lorem ipsum dolor sit amet.</div>
+						</div>
+					</div>
+					<div class="my-item-col col-xs-12 col-sm-3">
+						<div class="item text-center pt60 pb60">
+							<div class="txt">100</div>
+							<div class="txt2">Lorem ipsum dolor sit amet.</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+		<!-- service================================================================================ -->
+		<div class="service pt60 pb60">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12">
+						<div class="title">
+							<h1>Our Service</h1>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+
+
+					<!-- phone -->
+					<div class="col-xs-12 col-sm-4 col-sm-push-4">
+						<div class="pic">
+							<img src="https://api.fnkr.net/testimg/300x500/00CED1/FFF/?text=Phone" class="img-responsive center-block">
+						</div>
+					</div>
+
+
+					<!-- left -->
+					<div class="col-xs-12 col-sm-4 col-sm-pull-4">
+						<div class="item item-left">
+							<div class="row">
+								<div class="col-xs-3 col-sm-3 col-sm-push-9">
+									<div class="icon">
+										<img src="https://api.fnkr.net/testimg/60x60/00CED1/FFF/?text=img+placeholder" class="img-responsive">
+									</div>
+								</div>
+								<div class="col-xs-9 col-sm-9 col-sm-pull-3">
+									<div class="title">
+										<h2>Design....</h2>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi iure dolore voluptates enim cupiditate labore reprehenderit deserunt possimus, quaerat eaque perferendis laudantium? Cum maiores, magnam tenetur dolorum dignissimos architecto suscipit!</p>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-3 col-sm-3 col-sm-push-9">
+									<div class="icon">
+										<img src="https://api.fnkr.net/testimg/60x60/00CED1/FFF/?text=img+placeholder" class="img-responsive">
+									</div>
+								</div>
+								<div class="col-xs-9 col-sm-9 col-sm-pull-3">
+									<div class="title">
+										<h2>Design....</h2>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi quasi ipsum numquam aperiam temporibus et aspernatur quas reprehenderit, voluptates pariatur delectus voluptatibus beatae veniam dolor neque magnam libero iure, veritatis.</p>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-3 col-sm-3 col-sm-push-9">
+									<div class="icon">
+										<img src="https://api.fnkr.net/testimg/60x60/00CED1/FFF/?text=img+placeholder" class="img-responsive">
+									</div>
+								</div>
+								<div class="col-xs-9 col-sm-9 col-sm-pull-3">
+									<div class="title">
+										<h2>Design....</h2>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores iste vitae maxime, sunt nemo aspernatur optio consequuntur nostrum officia deleniti dignissimos atque. Mollitia harum hic ex, laborum nemo reiciendis. Eos!</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+
+					<!-- right -->
+					<div class="col-xs-12 col-sm-4">
+						<div class="item item-right">
+							<div class="row">
+								<div class="col-xs-3 col-sm-3">
+									<div class="icon">
+										<img src="https://api.fnkr.net/testimg/60x60/00CED1/FFF/?text=img+placeholder" class="img-responsive">
+									</div>
+								</div>
+								<div class="col-xs-9 col-sm-9">
+									<div class="title">
+										<h2>Design....</h2>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi iure dolore voluptates enim cupiditate labore reprehenderit deserunt possimus, quaerat eaque perferendis laudantium? Cum maiores, magnam tenetur dolorum dignissimos architecto suscipit!</p>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-3 col-sm-3">
+									<div class="icon">
+										<img src="https://api.fnkr.net/testimg/60x60/00CED1/FFF/?text=img+placeholder" class="img-responsive">
+									</div>
+								</div>
+								<div class="col-xs-9 col-sm-9">
+									<div class="title">
+										<h2>Design....</h2>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi quasi ipsum numquam aperiam temporibus et aspernatur quas reprehenderit, voluptates pariatur delectus voluptatibus beatae veniam dolor neque magnam libero iure, veritatis.</p>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-3 col-sm-3">
+									<div class="icon">
+										<img src="https://api.fnkr.net/testimg/60x60/00CED1/FFF/?text=img+placeholder" class="img-responsive">
+									</div>
+								</div>
+								<div class="col-xs-9 col-sm-9">
+									<div class="title">
+										<h2>Design....</h2>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores iste vitae maxime, sunt nemo aspernatur optio consequuntur nostrum officia deleniti dignissimos atque. Mollitia harum hic ex, laborum nemo reiciendis. Eos!</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+		<!-- data ================================================================================ -->
+		<div class="data pt60 pb60">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-3">
+						<div class="item text-center">
+							<img src="https://api.fnkr.net/testimg/150x150/00CED1/FFF/?text=img+placeholder" class="img-responsive center-block img-circle">
+							<p>Lorem ipsum dolor.</p>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-3">
+						<div class="item text-center">
+							<img src="https://api.fnkr.net/testimg/150x150/00CED1/FFF/?text=img+placeholder" class="img-responsive center-block img-circle">
+							<p>Lorem ipsum dolor.</p>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-3">
+						<div class="item text-center">
+							<img src="https://api.fnkr.net/testimg/150x150/00CED1/FFF/?text=img+placeholder" class="img-responsive center-block img-circle">
+							<p>Lorem ipsum dolor.</p>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-3">
+						<div class="item text-center">
+							<img src="https://api.fnkr.net/testimg/150x150/00CED1/FFF/?text=img+placeholder" class="img-responsive center-block img-circle">
+							<p>Lorem ipsum dolor.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+		<!-- blog ================================================================================ -->
+
+		<div class="blog pt60 pb60">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-4">
+						<div class="item">
+							<img src="https://api.fnkr.net/testimg/350x200/00CED1/FFF/?text=img+placeholder" class="img-responsive center-block">
+							<h2>title</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus nostrum quasi, vero dolor at impedit, iure illo aut repellendus dicta commodi incidunt ad aliquid sed a voluptate debitis. Voluptatibus, quibusdam.</p>
+							<a href="#" class="more pull-right">More</a>
+							<ul class="list-inline">
+								<li><i class="glyphicon glyphicon-time"></i>2.1.2017</li>
+								<li><i class="glyphicon glyphicon-comment"></i>88</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-4">
+						<div class="item">
+							<img src="https://api.fnkr.net/testimg/350x200/00CED1/FFF/?text=img+placeholder" class="img-responsive center-block">
+							<h2>title</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta ullam ipsam earum consectetur nam a eaque iste voluptatibus quis natus magnam dignissimos distinctio voluptatem aliquam nobis, ratione ipsa exercitationem hic.</p>
+							<a href="#" class="more pull-right">More</a>
+							<ul class="list-inline">
+								<li><i class="glyphicon glyphicon-time"></i>2.1.2017</li>
+								<li><i class="glyphicon glyphicon-comment"></i>88</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-4">
+						<div class="item">
+							<img src="https://api.fnkr.net/testimg/350x200/00CED1/FFF/?text=img+placeholder" class="img-responsive center-block">
+							<h2>title</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus natus vitae dicta facilis velit ut nobis delectus ipsa temporibus explicabo ab accusantium dolorem nam, sed deleniti consequatur quibusdam quae et.</p>
+							<a href="#" class="more pull-right">More</a>
+							<ul class="list-inline">
+								<li><i class="glyphicon glyphicon-time"></i>2.1.2017</li>
+								<li><i class="glyphicon glyphicon-comment"></i>88</li>
+							</ul>
+						</div>
+					</div>	
+				</div>
+			</div>
+		</div>
+
+
+		<!-- plan ================================================================================ -->
+		<div class="plan pt60 pb60">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-6 col-sm-offset-3">
+						<div class="title text-center">
+							<h1>Choose Your Plan</h1>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quis earum quas ab voluptate maxime, eius nam hic porro aliquam quos, quasi unde quidem omnis, rem cumque. Nobis, fugiat, officiis.</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 col-sm-3">
+						<div class="item text-center">
+							<div class="group">
+								<div class="title">GOLD</div>
+								<div class="price">
+									<span>888</span>
+								</div>
+							</div>
+							<div class="list-group">
+								<a href="#" class="list-group-item">清單項目 1</a>
+								<a href="#" class="list-group-item">清單項目 2</a>
+								<a href="#" class="list-group-item">清單項目 3</a>
+								<a href="#" class="list-group-item active">GET STARTED</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-3">
+						<div class="item text-center">
+							<div class="group">
+								<div class="title">GOLD</div>
+								<div class="price">
+									<span>888</span>
+								</div>
+							</div>
+							<div class="list-group">
+								<a href="#" class="list-group-item">清單項目 1</a>
+								<a href="#" class="list-group-item">清單項目 2</a>
+								<a href="#" class="list-group-item">清單項目 3</a>
+								<a href="#" class="list-group-item active">GET STARTED</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-3">
+						<div class="item text-center">
+							<div class="group">
+								<div class="title">GOLD</div>
+								<div class="price">
+									<span>888</span>
+								</div>
+							</div>
+							<div class="list-group">
+								<a href="#" class="list-group-item">清單項目 1</a>
+								<a href="#" class="list-group-item">清單項目 2</a>
+								<a href="#" class="list-group-item">清單項目 3</a>
+								<a href="#" class="list-group-item active">GET STARTED</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-3">
+						<div class="item text-center">
+							<div class="group">
+								<div class="title">GOLD</div>
+								<div class="price">
+									<span>888</span>
+								</div>
+							</div>
+							<div class="list-group">
+								<a href="#" class="list-group-item">清單項目 1</a>
+								<a href="#" class="list-group-item">清單項目 2</a>
+								<a href="#" class="list-group-item">清單項目 3</a>
+								<a href="#" class="list-group-item active">GET STARTED</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</body>
+</html>
+

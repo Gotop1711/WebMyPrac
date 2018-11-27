@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JQ_0522</title>
+	<style type="text/css">
+		* {
+		  padding:0;
+		  margin:0;
+		  list-style:none;
+		}
+
+		.tab{
+		  display:inline-block;
+		  width: 50px;
+		  height: 50px;
+		  background-color: #ccc;
+		  margin-left: 50px;
+		}
+
+		.on{
+		  background-color: #f00;
+		}
+
+		.on:hover{
+			background-color: #000;
+
+		}
+
+		.off{
+		  background-color: #0f0;
+		}
+
+		.off:hover{
+			transform:scale(2);
+		}
+
+	</style>
+</head>
+<body>
+	<ul>
+	  <li class="tab"></li>
+	  <li class="tab"></li>
+	  <li class="tab"></li>
+	  <li class="tab"></li>
+	  <li class="tab"></li>
+	</ul>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+
+
+	$('.tab').on('click', function(){
+		$(this).addClass('on').removeClass('off').siblings('.tab').addClass('off').removeClass('on');
+	})
+
+
+	$('.tab').on('mouseover', function(){
+
+		if($(this).hasClass('on')){
+
+		}//if
+
+	})//on
+
+
+	});
+</script>
+</body>
+</html>

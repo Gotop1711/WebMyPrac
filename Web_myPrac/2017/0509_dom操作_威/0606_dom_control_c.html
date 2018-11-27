@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>0508_dom_control_b</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<style type="text/css">
+
+		*{
+			margin: 0;
+			padding: 0;
+			list-style:none;
+		}
+
+		table{
+			background-color: #50CA92;
+
+		}
+
+		tr, th, td{
+			outline: .5px solid #fff;
+		}
+
+		tr>*{
+			padding: 10px 5px;
+			text-align: center;
+		}
+
+		._row:not(:first-child){
+			display: block;
+			position: relative;
+			z-index: 1;
+			margin-top: -50px;
+			transition: all 1s ease-in-out;
+		}
+
+		.add_photo{
+			width: 200px;
+			height: 70px;
+			background-color: #88B250;
+			cursor: pointer;
+		}
+
+
+		._delete{
+			width: 50px;
+			height: 50px;
+			background-color: #C0734C;
+			cursor: pointer;
+		}
+
+		#big_add div{
+			height: 50px;
+			width: 50px;
+			margin: auto;
+			overflow: hidden;
+			border-radius: 50%;
+			cursor: pointer;
+		}
+
+		#big_add div:hover .big_add{
+			transform-origin: left bottom;
+			animation: _grow 2s ease-in-out;
+		}
+
+
+		.big_add{
+			display: inline-block;
+			background-color: #ccc;
+			height: 50px;
+			width: 50px;
+			position: relative;
+		}
+
+		.big_add::before,
+		.big_add::after{
+			content:'';
+			background-color: #000;
+			position: absolute;
+			top:0;
+			right:0;
+			bottom:0;
+			left:0;
+			margin: auto;
+			width: 3px;
+			height: 40px;
+		}
+
+		.big_add::after{
+			transform:rotate(90deg);
+		}
+
+		@keyframes _grow{
+			0% {transform: scale(0);}
+			50% {transform: scale(1.5);}
+			100% {transform: scale(1);}
+		}
+
+/*
+		.height_0{
+			height:0px;
+			transition: all 2s;
+		}
+
+		.getHeight{
+			animation: _getHeight 2s;
+		}
+
+		@keyframes _getHeight{
+			0% {height:0px;}
+			100% {height:initial;}
+		}
+*/
+
+		.m_b_0{
+			z-index: 0 !important;
+			animation: m_b 1s ease-in-out forwards;
+			transition: all 1s ease-in-out;
+		}
+
+
+		@keyframes m_b {
+			0%{margin-top:-50px;}
+			100%{margin-top:0px;}
+		}
+
+
+	</style>
+
+</head>
+<body>
+
+
+<form id="AAA">
+	
+	<table>
+		<thead>
+			<tr>
+				<th>排序</th>
+				<th>圖片</th>
+				<th>標題</th>
+				<th>內容</th>
+				<th>連結</th>
+				<th>刪除</th>
+			</tr>
+		</thead>
+		<tbody>	
+			<tr class="_row">
+				<td></td>
+				<td>
+					<div class="add_photo"></div>
+				</td>
+				<td></td>
+				<td></td>
+				<td>
+					<div>
+						  <input type="text" name="" id="" value="" />
+					</div>
+					<div style="display: inline-block;">
+						  <label for="">本頁</label>
+						  <input type="radio" name="" id="" value="" />
+					</div>
+					<div style="display: inline-block;">
+						  <label for="">新視窗</label>
+						  <input type="radio" name="" id="" value="" />
+					</div>
+				</td>
+				<td>
+					<div class="_delete"></div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="6" id="big_add">
+					<div>
+						<span class="big_add"></span>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</form>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript">
+	
+$(function(){
+
+	var	_AAA = jQuery('#AAA'),
+		_add_photo = jQuery('.add_photo'),
+		__delete = jQuery('._delete'),
+		_row = jQuery('._row'),
+		_clean_row = _row.clone();
+
+
+
+	jQuery('#AAA').on('click', '.add_photo, #big_add div', _adding);//on
+
+
+	function _adding(){
+	var _row = jQuery('._row'),
+		_last_row = _row.last(),
+		_last_row = _last_row.css({'background-color':'#CAAE50'}),
+		_newRow = _clean_row.clone(true),
+
+		vvv = '';
+
+		_newRow.insertAfter(_last_row).addClass('m_b_0');
+
+	}//_adding
+
+
+
+	jQuery('#AAA').on('click', '._delete', _deleting);//on
+
+
+	function _deleting(){
+	var _row_counts = jQuery('._row').length;
+
+		if(_row_counts > 1){
+			jQuery(this).closest('._row').removeClass('m_b_0');
+		}//if
+
+	};//_deleting
+
+
+
+});//ready
+
+</script>
+</body>
+</html>

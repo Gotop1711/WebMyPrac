@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>sticker_ani_001</title>
+	<style type="text/css">
+
+* { margin: 0px; padding: 0px; border: 0px; text-decoration: none; list-style: none; color: inherit; }
+a { outline: none; }
+p { font-size: 0.875em; line-height: 2em; text-align: justify; }
+.fixed_cart { text-align: center; line-height: 45px; width: 75px; padding: 10px; position: fixed; right: 10px; z-index: 9; top: 30%; vertical-align: middle; cursor: pointer; box-shadow: rgba(0, 0, 0, 0.298039) 3px 3px 12px; background: #e57373; border: 3px solid #fff; transition: all 0.8s ease 0s; }
+.fixed_cart span { color: #fff; }
+.fixed_cart p { color: #fff; letter-spacing: 0px; margin: 0px; text-align: center; line-height: normal; font-weight: 500; display: inline-block; vertical-align: middle; }
+.fixed_cart:hover { opacity: 1; }
+.fixed_cart:hover::before,.fixed_cart:active::before { width: 25px; height: 25px; }
+.fixed_cart::before { pointer-events: none; position: absolute; content: ""; height: 0px; width: 0px; bottom: 0px; left: 0px; background: linear-gradient(45deg, white 45%, #aaa 50%, #ccc 56%, white 80%); box-shadow: rgba(0, 0, 0, 0.4) 1px -1px 1px; transition-duration: 0.3s; transition-property: width, height; }
+.ribbon { position: absolute; right: -8px; top: -8px; z-index: 1; overflow: hidden; width: 75px; height: 75px; text-align: right; }
+.ribbon span { font-size: 10px; font-weight: bold; color: #fff; text-transform: uppercase; text-align: center; line-height: 20px; transform: rotate(45deg); width: 80px; display: block; background: linear-gradient(rgb(247, 5, 5) 0%, #f00 100%); box-shadow: #000 0px 3px 10px -5px; position: absolute; top: 12px; right: -18px; }
+.ribbon span::before { content: ""; position: absolute; left: 0px; top: 100%; z-index: -1; border-width: 3px; border-style: solid; border-color: #f00 transparent transparent #f00; }
+.ribbon span::after { content: ""; position: absolute; right: 0px; top: 100%; z-index: -1; border-width: 3px; border-style: solid; border-color: #f00 #f00 transparent transparent; }
+
+	</style>
+</head>
+<body>
+<!-- "service.php#vip_section" -->
+<a id="go_cart" class="fixed_cart" href="">
+    <p>點我購買VIP券</p>
+    <div class="ribbon"><span>VIP</span></div>
+</a>
+
+</body>
+</html>

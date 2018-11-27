@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>1025_03_ setTimeout</title>
+	<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+		list-style:none;
+	}
+
+	body{
+		text-align: center;
+	}
+
+	.box{
+		position: absolute;
+		top:0;
+		right:0;
+		bottom:0;
+		left:0;
+		margin:auto;
+		width: 400px;
+		height: 400px;
+		background-color: #000;
+		color: #333;
+		line-height: 400px;
+		font-size: 72px;
+		font-family: arial, sans-serif;
+		border-radius: 50%;
+		box-shadow:0 0 5px 5px #2e2e2e inset;
+		background:radial-gradient(circle,#b3b3b3, #333);
+	}
+
+	.box::before{
+		content:'';
+		display: block;
+		width: 150px;
+		height: 60px;
+		background-color: #ccc;
+		border-radius: 50% 50% 0 0;
+		background: linear-gradient(#c7c7c7, #333);
+
+		position: absolute;
+		z-index: -1;
+		top:-10px;
+		left:0;
+		transform: rotateZ(-35deg);
+	}
+
+	.box::after{
+		content:'';
+		display: block;
+		width: 150px;
+		height: 60px;
+		background-color: #ccc;
+		border-radius: 50% 50% 0 0;
+		background: linear-gradient(#c7c7c7, #333);
+
+		position: absolute;
+		z-index: -1;
+		top:-10px;
+		right:0;
+		transform: rotateZ(35deg);
+	}
+
+	.wrap{
+		position: absolute;
+		top:0;
+		right:0;
+		bottom:0;
+		left:0;
+		margin:auto;
+		width: 440px;
+		height: 440px;
+		border-radius: 50%;
+		background-color: #f00;
+		background:linear-gradient(45deg,#ac6b1b 0%, #7c411d 30%, #c59630 50%, #7c411d 90%);
+
+	}
+
+	.wrap:before{
+		content:'';
+		display: block;
+		position: absolute;
+		z-index: -1;
+		left:0;
+		bottom:0;
+		width: 100px;
+		height:100px;
+		background-color: transparent;
+		border-top: 10px solid #000;
+		border-left: 30px solid #000;
+		border-radius: 100px 0 0 0;
+
+	}
+
+	.wrap:after{
+		content:'';
+		display: block;
+		position: absolute;
+		z-index: -1;
+		right:0;
+		bottom:0;
+		width: 100px;
+		height:100px;
+		background-color: transparent;
+		border-top: 10px solid #000;
+		border-right: 30px solid #000;
+		border-radius: 0 100px 0 0;
+	}
+
+
+	</style>
+</head>
+<body>
+	
+<div class="wrap">
+	<div class="box"></div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript">
+
+	var bb = setTimeout(ttt,1000);
+
+	var aa = prompt('set your time','');
+	function ttt(){
+		$('.box').html(aa);
+		aa--;
+		bb = setTimeout(ttt,2000);
+
+		if(aa < 0){
+		$('.box').html('Stop'),
+		$('.box').css('background-color', '#0f0');
+
+		}//end_if
+	}//end_ttt	
+
+
+</script>
+</body>
+</html>

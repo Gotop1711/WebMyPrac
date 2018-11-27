@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Graham_puzzle</title>
+	<style type="text/css">
+
+		.unselectable{
+			-moz-user-select: none; 
+			-webkit-user-select: none; 
+			-ms-user-select:none; 
+			user-select:none;
+			-o-user-select:none;
+		}
+
+
+		*{
+			margin: 0;
+			padding: 0;
+			list-style:none;
+		}
+
+		.grid{
+			width: 300px;
+			height: 300px;
+			border-collapse: collapse;
+		}
+
+		.grid td{
+			outline: 1px solid #000;
+		}
+
+		.billboard{
+			margin-top: 20px;
+		}
+
+		.billboard span:first-child{
+			margin-right: 20px;
+		}
+
+		.a_piece{
+			width: 100px;
+			height: 100px;
+			background-color: #f00;
+			position: absolute;
+			top:0;
+			left:0;
+		}
+
+	.pieces{
+		background-color: rgba(32, 223, 124, 0.63);
+		width: 100px;
+		height: 100px;
+		position: absolute;
+		top:0;
+		left:0;
+	}
+
+
+
+	</style>
+</head>
+<body>
+
+	<table class="grid">
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+	</table>
+
+
+	<!-- <div class="a_piece"></div> -->
+	<div class="pieces"></div>
+	<div class="pieces"></div>
+	<div class="pieces"></div>
+	<div class="pieces"></div>
+	<div class="pieces"></div>
+	<div class="pieces"></div>
+	<div class="pieces"></div>
+	<div class="pieces"></div>
+
+
+	<div>
+		<div class="grid_info">
+            <p>
+                (1): <span class="_01 a_pos"></span>
+                (2): <span class="_02 a_pos"></span> 
+                (3): <span class="_03 a_pos"></span>
+            </p>
+            <p>
+                (4): <span class="_04 a_pos"></span>
+                (5): <span class="_05 a_pos"></span> 
+                (6): <span class="_06 a_pos"></span>
+            </p>
+            <p>
+                (7): <span class="_07 a_pos"></span>
+                (8): <span class="_08 a_pos"></span> 
+                (9): <span class="_09 a_pos"></span>
+            </p>
+		</div>
+	</div>
+
+
+	<div>
+		<div class="billboard unselectable">
+            <p>
+                screenX: <span class="screenX"></span>
+                screenY: <span class="screenY"></span> 
+            </p>
+            <p>
+                pageX: <span class="pageX"></span>
+                pageY: <span class="pageY"></span> 
+            </p>
+            <p>
+                clientX: <span class="clientX"></span>
+                clientY: <span class="clientY"></span>
+            </p>
+		</div>
+	</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+
+var screenX = document.querySelector('.screenX');        
+var screenY = document.querySelector('.screenY');        
+var pageX = document.querySelector('.pageX');        
+var pageY = document.querySelector('.pageY');        
+var clientX = document.querySelector('.clientX');        
+var clientY = document.querySelector('.clientY'); 
+
+	function getPosition(e){
+
+	  screenX.textContent = e.screenX;  
+	  screenY.textContent = e.screenY;  
+	  pageX.textContent = e.pageX;    
+	  pageY.textContent = e.pageY;  
+	  clientX.textContent = e.clientX; 
+	  clientY.textContent = e.clientY; 
+
+	}//getPosition
+
+	var 
+		el = document.body,
+		$grid = document.querySelector('.grid'),
+		vv = '';
+
+		$grid.addEventListener('mousemove', getPosition, false);
+
+		var 
+			_matrix = [],
+			_td = document.querySelectorAll('td'),
+			a_pos = document.querySelectorAll('.a_pos'),
+			pieces = document.querySelectorAll('.pieces'),
+
+			a_piece = document.querySelector('.a_piece'),
+
+			_random_to8 = Math.floor((Math.random()*9)),
+
+			gg = '';
+
+
+		//製做格點座標 ===============================================
+		for(i=0; i<_td.length;i++){
+
+		var
+			per_left = parseInt(_td[i].offsetLeft),
+			per_top = parseInt(_td[i].offsetTop),
+			per_pos_text = "\[" + per_left +" \: " + per_top + "\]",
+			per_pos_obj = {offsetLeft: _td[i].offsetLeft, offsetTop: _td[i].offsetTop},
+			per_pos_ar = [_td[i].offsetLeft, _td[i].offsetTop],
+
+			ll = '';
+
+			a_pos[i].textContent = per_pos_text;
+
+			_matrix.push(per_pos_ar);
+			// console.log(_matrix);
+
+		}//for
+
+
+		//亂數放置 ===============================================
+		function randonMove(e){
+			console.log(e);
+
+			e.style.left = _matrix[_random_to8][0] + 'px';
+			e.style.top = _matrix[_random_to8][1] + 'px';
+
+			console.log('left :' + _matrix[_random_to8][0]);
+			console.log('right :' + _matrix[_random_to8][1]);
+
+			// 但"_random_to"變數是網業載入時卻定的;
+		}
+
+		//拼圖塊 ================================================
+
+	
+		var _amount = pieces.length;
+
+		for(i=0; i<_amount;i++){
+
+		var 
+			_Mtx_len = _matrix.length,
+			_Mtx_len = _Mtx_len + 1,
+			_random_to8 = Math.floor((Math.random()*_Mtx_len)),
+			// br = [0, 1, 2, 3, 4, 5, 6, 7, 8],
+
+
+			vv = '';
+
+			// cr = br.splice(i, 1);
+			// console.log(cr);
+
+
+
+			// pieces[i].style.left = _matrix[][0] + 'px';
+			// pieces[i].style.top = _matrix[][1] + 'px';
+
+			_pop =  _matrix.pop(_amount, _amount - 1);
+			console.log(_random_to8);
+
+/*
+			if( pieces[_now].style.left != pieces[_prev].style.left){
+				pieces[i].style.left = _matrix[_random_to8][0] + 'px';
+				pieces[i].style.top = _matrix[_random_to8][1] + 'px';
+			}//if
+*/
+
+
+		}//for
+
+
+	});
+</script>
+</body>
+</html>

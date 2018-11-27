@@ -1,0 +1,185 @@
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Deadline is coming</title>
+    <link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet">
+    <style type="text/css">
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 微軟正黑體;
+}
+
+.container{
+  position: relative;
+  text-align: center;
+
+  color: #555;
+  font-size: 24px;
+}
+
+.nowtime{
+  margin: 25px 0;
+  line-height: 50px;
+  color: #666;
+}
+
+.nowtime div{
+  display: inline-block;
+  text-align: center;
+  border-radius:15px;
+  width: 80px;
+  margin-right: 5px;
+}
+
+.nowtime div ~ div{
+  width: 50px;
+}
+
+.endtime{
+  margin: 25px 0 40px;
+  line-height: 50px;
+  color: #888;
+}
+
+.endtime input{
+  width: 80px;
+  text-align: center;
+  vertical-align: 6%;
+  line-height: 30px;
+    
+  border-radius:10px;
+  border:1px solid #ccc;
+  margin: 0 10px 0 5px;
+  font-size: 16px;
+  color: #888;
+}
+
+.howmuchtime{
+  margin: 20px 0;
+  height: 120px;
+  background-image:linear-gradient(90deg,#ffa 0%,#faa 75%);
+}
+
+.howmuchtime div{
+  display: inline-block;
+  margin: 0 10px 0 5px;
+  
+  line-height: 120px;
+  width: 100px;
+  border-radius: 50%;
+  
+  font-size: 60px;
+  color: #fff;
+}
+
+.howmuchtime div:nth-child(1){
+  width: 150px;
+  font-size: 80px;
+  color: #f77;
+  position: relative;
+}
+
+.howmuchtime div:nth-child(1):before{
+  content:'';
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+
+  
+  width: 75%;
+  height: 10px;
+  background-color: #f66;
+}
+
+.motto{
+  margin: 50px 0;
+  color: #9bb;
+  font-family: 'Nothing You Could Do', cursive;
+  font-size: 30px;
+}
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="nowtime">現在時刻
+      <div></div>年
+      <div></div>月
+      <div></div>日
+      <div></div>點
+      <div></div>分
+      <div></div>秒
+    </div>
+  
+  
+    <div class="endtime">死線就在
+      <input type='number' value ='2016' min='2016'>年
+      <input type='number' value ='12' min='1' max='12'>月
+      <input type='text' value ='30'>日
+      <input type='text' value ='0'>點
+      <input type='text' value ='0'>分
+    </div>
+ 
+      
+    <div class="howmuchtime">你只剩下
+      <div></div>天
+      <div></div>小時
+      <div></div>分鐘
+      <div></div>秒
+    </div>
+  
+    <div class="motto">
+    - Time flies like an arrow -
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript">
+var $nowtime = $('.nowtime div');
+var $endtime = $('.endtime input');
+var endTime, howmuchTime;
+var $howmuchtime = $('.howmuchtime div');
+
+
+    var setTime = function(){
+     // 現在時刻
+        var nowTime = new Date();
+ 
+        var NOW = [ nowTime.getFullYear(),
+                    nowTime.getMonth()+1,
+                    nowTime.getDate(),
+                    nowTime.getHours(),
+                    nowTime.getMinutes(),
+                    nowTime.getSeconds()] ;
+        
+        for(var i=0; i<6; i++){
+            $nowtime.eq(i).text( NOW[i] );
+        }
+      
+      // 結束時刻
+        endTime = new Date($endtime[0].value,
+                           $endtime[1].value-1,
+                           $endtime[2].value,
+                           $endtime[3].value,
+                           $endtime[4].value);
+      
+      // 剩餘時間
+        howmuchTime = (endTime - nowTime)/1000;
+      
+        var Time = [  Math.floor(howmuchTime/60/60/24),
+                      Math.floor(howmuchTime%(60*60*24)/60/60),            
+                      Math.floor(howmuchTime%(60*60)/60),
+                      Math.ceil(howmuchTime%60) ] ;
+      
+        for(var i=0; i<4; i++){
+            $howmuchtime.eq(i).text( Time[i] );
+        }
+        
+        setTimeout(setTime, 1000);
+    };
+
+    setTime();
+</script>
+</body>
+</html>

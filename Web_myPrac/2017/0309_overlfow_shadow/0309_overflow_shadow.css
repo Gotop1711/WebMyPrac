@@ -1,0 +1,22 @@
+
+
+		.wrapper{
+			/*background-color: #0f0;*/
+			width: 300px;
+			height: 200px;
+			/*position: relative;*/
+			/*top:200px;*/
+			overflow:hidden;
+			padding:20px;
+			margin:-10px;
+		}
+
+		.shadow{
+			background-color: #ccc;
+			width: 300px;
+			height: 200px;
+			box-shadow: 0 0 6px 6px #000;
+			/*position: absolute;	*/
+			/*top: 50px;*/
+
+		}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS_continue</title>
+	<style type="text/css">
+
+		*{
+			margin: 0;
+			padding: 0;
+			list-style:none;
+		}
+
+		ul{
+			width: 300px;
+			height: 100px;
+			position: absolute;
+			top:0;
+			right:0;
+			bottom:0;
+			left:0;
+			margin: auto;
+			display: flex;
+		}
+
+		li{
+			outline: 1px solid #000;
+			flex-grow:1;
+			/*flex-shrink: 2;*/
+			/*flex-basis: 40px;*/
+		}
+
+
+		.green{
+			background-color: #0f0;
+			/*flex-basis: 60px;*/
+			/*flex-shrink: 1;*/
+		}
+
+		/*  
+
+		(40*8 + 60*2) - 300 = 140
+		預設每個li flex-shrink是1; 也就是說 140 / 10 = 14;
+		預設每個li flex-shrink是2; 也就是說 140 / 20 = 7;
+
+		(2*8 + 1*2) = 18; 140 / 18 = 7.777;
+
+		*/
+
+		.red{background-color: #f00;}
+
+		.black{background-color: #000;}
+
+		.blue{background-color: #00f;}
+
+	</style>
+</head>
+<body>
+	<ul>
+		<li class="aa"></li>
+		<li class="aa"></li>
+		<li class="aa"></li>
+		<li class="aa"></li>
+		<li class="green"></li>
+		<li class="ttq"></li>
+		<li class="aa"></li>
+		<li class="aa"></li>
+		<li class="red"></li>
+		<li class="ttq"></li>
+		<li class="aa"></li>
+		<li class="aa"></li>
+	</ul>
+
+
+<script type="text/javascript">
+	var
+		$body = document.getElementsByTagName('body'),
+		$li = document.getElementsByTagName('li'),
+
+		classes = [],
+
+		aa = '';
+
+		console.log($li);
+
+		for(i=0;i<$li.length;i++){
+
+			// classes.push($li[i].getAttribute('class'));
+
+
+			//測試(1): 改變顏色
+			if(!$li[i].hasAttribute('class')) continue;
+				if($li[i].getAttribute('class') == 'red')
+					$li[i].setAttribute('class', 'black');
+				else
+					$li[i].setAttribute('class', 'blue');
+
+
+			//測試(2): console正確class
+			if($li[i].getAttribute('class') !== 'ttq') continue
+				console.log($li[i].getAttribute('class'));
+
+
+		}//for
+
+		// console.log(classes);
+
+</script>
+</body>
+</html>
