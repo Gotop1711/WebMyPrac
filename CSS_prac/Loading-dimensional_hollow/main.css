@@ -59,7 +59,11 @@
   width: 168px;
   height: 168px;
   border-radius: 50%;
-  border:30px solid #ccc;
+  border-style: solid;
+  border-width: 30px;
+  border-color: #ccc;
+  /* border-image: linear-gradient(45deg, #ff0, #f0f, #f00, #00f, #0f0); */
+  /* border-image-slice: 1; */
   box-shadow: 0 20px 0 0 #4f4f4f;
   position: absolute;
   top: -50px;
