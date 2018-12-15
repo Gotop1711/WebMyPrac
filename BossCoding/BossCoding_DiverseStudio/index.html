@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>BossCoding--Dyverse Studio 0719</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<!-- <script> src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"</script> -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<body id="vue_app">
+  <div class="mute_btn">Mute Sound</div>
+  <div class="container-fluid toggle_bk_0">
+    <!--audio(src="http://dyverse.studio/backmusic/Layer%201.mp3" autoplay loop)-->
+    <section class="row row_black row_index" id="index">
+      <canvas id="background_index"></canvas>
+      <div class="index_center">
+        <svg xmlns="http://www.w3.org/2000/svg" id="icon" viewbox="0 0 82.28 77.35">
+          <defs>
+            <style>
+              .cls-1,
+              .cls-2,
+              .cls-3 {
+                fill: none;
+                stroke: #c9a063;
+                stroke-linejoin: round;
+              }
+
+              .cls-1,
+              .cls-2 {
+                stroke-linecap: round;
+              }
+
+              .cls-1 {
+                stroke-linejoin: round;
+              }
+
+              .cls-2,
+              .cls-3 {
+                stroke-miterlimit: 10;
+              }
+
+              .cls-3 {
+                stroke-width: 0.2px;
+              }
+            </style>
+            <clipPath id="cut-off-bottom">
+              <path d="M14.63,59.53A24.16,24.16,0,1,0,27.86,13.05" style="transform: scale(1.1) translateX(-3px) translateY(-3px);"></path>
+            </clipPath>
+          </defs>
+          <g class="cd_wave" clip-path="url(#cut-off-bottom)">
+            <g class="cd_in">
+              <path class="cls-1" id="mainhalfcir" d="M14.63,59.53A24.16,24.16,0,1,0,27.86,13.05Z"></path>
+              <path class="cls-2" d="M27.4,37.93a6.44,6.44,0,0,1-8,4.43l1.76-6.19L23,30A6.44,6.44,0,0,1,27.4,37.93Z"></path>
+            </g>
+          </g>
+          <g class="playline" clip-path="url(#cut-off-bottom)">
+            <circle class="cls-2" cx="0" cy="0" r="10"></circle>
+          </g>
+          <g class="pointerb">
+            <line class="cls-1" x1="61.13" y1="59.53" x2="52.62" y2="36.76"></line>
+            <g class="pointer">
+              <path class="cls-2" d="M52.62 36.76 33.31 36.76"></path>
+              <line class="cls-1" x1="33.31" y1="34.22" x2="33.31" y2="39.3"></line>
+            </g>
+          </g>
+          <path class="drawing cls-2" d="M70.86 25.35 67.74 36.29 61.13 59.53 "></path>
+          <line class="cls-1" x1="73.4" y1="25.35" x2="68.31" y2="25.35"></line>
+          <line class="cls-1" x1="63.33" y1="59.53" x2="58.25" y2="59.53"></line>
+          <path class="cls-3" d="M26.3,18.52a24.27,24.27,0,0,0-4.19-1.63L8.88,63.36A24.14,24.14,0,0,0,31.64,58.1"></path>
+        </svg>
+        <div class="title blingtext">DYVERSE x STUDIO</div>
+        <div class="title title2 blingtext">歧響音樂</div>
+      </div>
+    </section>
+    <section class="span_100vh toggle_bk_1" id="about"></section>
+    <div class="row row_yellow row_about">
+      <canvas id="background_intro"></canvas>
+      <div class="container-fluid min_div">
+        <div class="col-sm-4">
+          <div class="v_center">
+            <h1>About</h1>
+            <h2>{{about.slogan}}</h2>
+            <p class="maintexts">{{{about.description}}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="row row_white row_service" id="service">
+      <div class="container-fluid min_div">
+        <div class="col-sm-12">
+          <h1>Service</h1>
+        </div>
+        <div class="col-sm-12 col_service">
+          <div class="col-sm-3">
+            <svg class="sv_icon sv_icon1" id="service_1" data-name="圖層 1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 93.14 93.85">
+              <defs>
+                <style>
+                  .s1cls-1,
+                  .s1cls-2 {
+                    fill: none;
+                  }
+
+                  .s1cls-1,
+                  .s1cls-2,
+                  .s1cls-3,
+                  .s1cls-5,
+                  .s1cls-6 {
+                    stroke: #c9a063;
+                  }
+
+                  .s1cls-1,
+                  .s1cls-2,
+                  .s1cls-3,
+                  .s1cls-4,
+                  .s1cls-5 {
+                    stroke-miterlimit: 10;
+                  }
+
+                  .s1cls-1,
+                  .s1cls-3,
+                  .s1cls-6 {
+                    stroke-width: 1.5px;
+                  }
+
+                  .s1cls-4,
+                  .s1cls-5,
+                  .s1cls-6 {
+                    fill: #eee;
+                  }
+
+                  .s1cls-3 {
+                    fill: #c9a063;
+                    stroke: #eee;
+                  }
+                </style>
+              </defs>
+              <title>網站設計</title>
+              <rect class="s1cls-1" x="7.49" y="28.25" width="41.49" height="53.25"></rect>
+              <line class="s1line s1cls-2" x1="11.65" y1="45.74" x2="43.18" y2="45.74"></line>
+              <line class="s1line s1cls-2" x1="11.65" y1="50.59" x2="43.18" y2="50.59"></line>
+              <line class="s1line s1cls-2" x1="11.65" y1="55.43" x2="43.18" y2="55.43"></line>
+              <line class="s1line s1cls-2" x1="11.65" y1="60.28" x2="43.18" y2="60.28"></line>
+              <line class="s1line s1cls-2" x1="11.65" y1="65.12" x2="43.18" y2="65.12"></line>
+              <line class="s1line s1cls-2" x1="14.42" y1="69.97" x2="45.95" y2="69.97"></line>
+              <circle class="s1cls-3" id="s1bc" cx="53.83" cy="44.16" r="31.82"></circle>
+              <circle class="s1cls-4" id="s1mc" cx="53.83" cy="44.62" r="11.73"></circle>
+              <circle class="s1cls-5" id="s1sc" cx="53.83" cy="44.62" r="3.56"></circle>
+              <polygon class="s1cls-6" id="s1playbtn" points="66.88 62.69 66.88 79.34 82.32 71.02 66.88 62.69"></polygon>
+            </svg>
+            <h2>{{service[0].title}}</h2>
+            <p class="maintexts">{{service[0].description}}</p>
+          </div>
+          <div class="col-sm-3">
+            <svg class="sv_icon sv_icon2" id="service_2" data-name="圖層 1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 93.14 93.85">
+              <defs>
+                <style>
+                  .s2cls-1,
+                  .s2cls-5 {
+                    fill: none;
+                  }
+
+                  .s2cls-1,
+                  .s2cls-3,
+                  .s2cls-5 {
+                    stroke: #c9a063;
+                  }
+
+                  .s2cls-1,
+                  .s2cls-3,
+                  .s2cls-4,
+                  .s2cls-5 {
+                    stroke-miterlimit: 10;
+                  }
+
+                  .s2cls-1 {
+                    stroke-width: 1.5px;
+                  }
+
+                  .s2cls-2,
+                  .s2cls-4 {
+                    fill: #c9a063;
+                  }
+
+                  .s2cls-3 {
+                    fill: #eee;
+                  }
+
+                  .s2cls-4 {
+                    stroke: #eee;
+                  }
+                </style>
+              </defs>
+              <title>網站設計</title>
+              <g id="s2all">
+                <rect class="s2cls-1" x="12.37" y="43.64" width="64.51" height="39.21"></rect>
+                <g id="s2boardtop">
+                  <polygon class="s2cls-1" points="74.4 22.98 13.19 43.64 9.86 32.87 71.08 12.21 74.4 22.98"></polygon>
+                  <polygon class="s2cls-2" points="16.04 30.79 22.23 40.59 29.4 38.17 23.37 28.31 16.04 30.79"></polygon>
+                  <polygon class="s2cls-2" points="30.82 25.8 37.01 35.6 44.17 33.19 38.14 23.33 30.82 25.8"></polygon>
+                  <polygon class="s2cls-2" points="45.05 21 51.24 30.8 58.41 28.38 52.38 18.52 45.05 21"></polygon>
+                  <polygon class="s2cls-2" points="59.83 16.01 66.02 25.81 73.18 23.4 67.15 13.54 59.83 16.01"></polygon>
+                </g>
+                <circle class="s2cls-3" id="s2cir1" cx="30.77" cy="63.55" r="7.85"></circle>
+                <circle class="s2cls-4" id="s2cir2" cx="30.77" cy="63.55" r="3.91"></circle>
+                <circle class="s2cls-4" id="s2cir3" cx="57.88" cy="63.55" r="3.91"></circle>
+                <polygon class="s2cls-2" id="s2musicbomb" points="70.08 59 74.4 47.53 85.23 50.06 77.88 43.92 85.23 30.88 72.6 39.74 67.92 30.4 65.89 41.6 53.39 39.98 62.84 47.38 59.83 58.57 67.92 51.35 70.08 59"></polygon>
+                <line class="s2cls-5" x1="12.37" y1="48.03" x2="76.88" y2="48.03"></line>
+              </g>
+            </svg>
+            <h2>音效製作</h2>
+            <p class="maintexts">LOGO 與企業形象音效，廣告、影視與遊戲音效，網站特效音，手機鈴聲</p>
+          </div>
+          <div class="col-sm-3">
+            <svg class="sv_icon sv_icon3" id="service_3" data-name="圖層 1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 93.14 93.85">
+              <defs>
+                <style>
+                  .s3cls-1,
+                  .s3cls-2 {
+                    fill: none;
+                    stroke: #c9a063;
+                    stroke-miterlimit: 10;
+                  }
+
+                  .s3cls-1 {
+                    stroke-width: 1.5px;
+                  }
+
+                  .s3cls-3 {
+                    fill: #c9a063;
+                  }
+                </style>
+              </defs>
+              <title>網站設計</title>
+              <rect class="s3cls-1" x="11.34" y="12.34" width="62.88" height="8.77"></rect>
+              <rect class="s3cls-1" x="24" y="27.61" width="62.88" height="8.77"></rect>
+              <rect class="s3cls-1" x="6.26" y="43.57" width="62.88" height="8.77"></rect>
+              <rect class="s3cls-1" x="17.55" y="59.07" width="62.88" height="8.77"></rect>
+              <rect class="s3cls-1" x="17.55" y="74.41" width="62.88" height="8.77"></rect>
+              <line class="s3cls-2" x1="27.86" y1="9.72" x2="27.86" y2="87.12"></line>
+              <line class="s3cls-2" x1="65.99" y1="6.72" x2="65.99" y2="84.12"></line>
+              <rect class="s3cls-3" x="27.86" y="27.95" width="21.12" height="8.77"></rect>
+              <rect class="s3cls-3" x="65.99" y="59.07" width="14.43" height="8.77"></rect>
+              <rect class="s3cls-3" x="35.84" y="74.41" width="14.95" height="8.77"></rect>
+              <rect class="s3cls-3" x="39.83" y="43.57" width="5.73" height="8.77"></rect>
+              <rect class="s3cls-3" x="55.44" y="12.13" width="10.56" height="8.2"></rect>
+              <g id="s3per1">
+                <polygon class="s3cls-3" points="30.49 12.23 28.23 21.21 29.43 21.21 31.82 12.23 30.49 12.23"></polygon>
+                <polygon class="s3cls-3" points="33.01 12.23 30.75 21.21 31.95 21.21 34.34 12.23 33.01 12.23"></polygon>
+                <polygon class="s3cls-3" points="35.72 12.23 33.46 21.21 34.66 21.21 37.05 12.23 35.72 12.23"></polygon>
+                <polygon class="s3cls-3" points="38.24 12.23 35.99 21.21 37.18 21.21 39.57 12.23 38.24 12.23"></polygon>
+              </g>
+              <g id="s3per2">
+                <polygon class="s3cls-3" points="56.05 58.97 53.8 67.95 54.99 67.95 57.38 58.97 56.05 58.97"></polygon>
+                <polygon class="s3cls-3" points="58.58 58.97 56.32 67.95 57.52 67.95 59.91 58.97 58.58 58.97"></polygon>
+                <polygon class="s3cls-3" points="61.29 58.97 59.03 67.95 60.22 67.95 62.62 58.97 61.29 58.97"></polygon>
+                <polygon class="s3cls-3" points="63.81 58.97 61.55 67.95 62.75 67.95 65.14 58.97 63.81 58.97"></polygon>
+                <polygon class="s3cls-3" points="45.57 58.97 43.31 67.95 44.51 67.95 46.9 58.97 45.57 58.97"></polygon>
+                <polygon class="s3cls-3" points="48.1 58.97 45.84 67.95 47.03 67.95 49.43 58.97 48.1 58.97"></polygon>
+                <polygon class="s3cls-3" points="50.8 58.97 48.55 67.95 49.74 67.95 52.13 58.97 50.8 58.97"></polygon>
+                <polygon class="s3cls-3" points="53.33 58.97 51.07 67.95 52.27 67.95 54.66 58.97 53.33 58.97"></polygon>
+              </g>
+            </svg>
+            <h2>混音後製</h2>
+            <p class="maintexts">歌手與樂手錄音，旁白錄製，音樂會現場錄音，後製編輯，混音與母帶處理</p>
+          </div>
+          <div class="col-sm-3">
+            <svg class="sv_icon sv_icon4" id="service_4" data-name="圖層 1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 93.14 93.85">
+              <defs>
+                <style>
+                  .s4cls-1,
+                  .s4cls-2 {
+                    fill: none;
+                    stroke: #c9a063;
+                    stroke-miterlimit: 10;
+                  }
+
+                  .s4cls-1 {
+                    stroke-width: 1.5px;
+                  }
+
+                  .s4cls-3 {
+                    fill: #c9a063;
+                  }
+                </style>
+                <clipPath id="cutscreen">
+                  <rect class="s4cls-2" x="20.35" y="19.61" width="52.44" height="40.26"></rect>
+                </clipPath>
+              </defs>
+              <title>網站設計</title>
+              <rect class="s4cls-1" x="9.57" y="13.16" width="73.99" height="53.17"></rect>
+              <rect class="s4cls-2" x="20.35" y="19.61" width="52.44" height="40.26"></rect>
+              <rect class="s4cls-3" x="35.78" y="77.18" width="21.58" height="6.47"></rect>
+              <rect class="s4cls-3" x="45.04" y="66.33" width="3.06" height="11.06"></rect>
+              <line class="s4cls-2" x1="20.35" y1="26.92" x2="72.79" y2="26.92"></line>
+              <line class="s4cls-2" x1="20.35" y1="33.1" x2="72.79" y2="33.1"></line>
+              <line class="s4cls-2" x1="20.35" y1="39.28" x2="72.79" y2="39.28"></line>
+              <line class="s4cls-2" x1="20.35" y1="45.46" x2="72.79" y2="45.46"></line>
+              <line class="s4cls-2" x1="20.35" y1="51.64" x2="72.79" y2="51.64"></line>
+              <g clip-path="url(#cutscreen)">
+                <circle class="s4cls-3" id="score_cir1" cx="28.76" cy="26.72" r="3.07"></circle>
+                <circle class="s4cls-3" id="score_cir2" cx="37.91" cy="39.28" r="3.07"></circle>
+                <circle class="s4cls-3" id="score_cir3" cx="52.14" cy="33.1" r="3.07"></circle>
+                <circle class="s4cls-3" id="score_cir4" cx="64.96" cy="51.64" r="3.07"></circle>
+              </g>
+            </svg>
+            <h2>數位製譜</h2>
+            <p class="maintexts">樂譜電子檔製作，流行音樂、樂團譜製作，現代音樂、室內樂、交響樂總譜與分譜打印</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="row row_black row_works toggle_bk_2" id="works">
+      <div class="container-fluid min_div">
+        <div class="col-sm-12">
+          <h1>Works</h1>
+        </div>
+        <div class="col-sm-12 col_tracks">
+          <div class="tracks container_fluid">
+            <div class="alltrack container_fluid">
+              <div class="track" v-for="stk in track" title="點擊前往soundcloud查看 {{stk.title}} 系列作品">
+                <div class="track_job">({{stk.job}})</div>
+                <div class="track_title">{{stk.title}}</div>
+                <div class="track_description">{{{stk.cooperation}}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="row row_yellow row_projects toggle_bk_3" id="projects">
+      <div class="container-fluid min_div">
+        <div class="col-sm-12">
+          <h1>Projects</h1>
+        </div>
+        <div class="col-sm-12 projs">
+          <div class="col-sm-12 proj" v-for="(id,proj) in project">
+            <div class="col-sm-12 video_container">
+              <iframe class="mainvideo" src="{{* proj.works.length&gt;0?proj.works[0].video_url:''}}" frameborder="0"
+                width="100%" height="300px" allowfullscreen="allowfullscreen" id="mainvideo_{{id}}"></iframe>
+              <div class="col-sm-4 people_pic"><img src="{{proj.singer.img_url}}" />
+                <h2 class="title">{{proj.singer.name}}</h2>
+                <p class="maintexts">{{{proj.singer.description}}}</p>
+                <div class="proj_video_list">作品列表</div>
+                <div class="proj_video_list" v-for="(id2,pr) in proj.works" onclick="website_data.project[{{id}}].nshowid={{id2}};$('#mainvideo_{{id}}').attr('src',website_data.project[{{id}}].works[{{id2}}].video_url);$('#proj{{id}}_intro').text(website_data.project[{{id}}].works[{{id2}}].title);$('#proj{{id}}_text').text(website_data.project[{{id}}].works[{{id2}}].description);">▻
+                  {{pr.title}}</div>
+              </div>
+              <div class="col-sm-8 introduction">
+                <h2 class="title" id="proj{{id}}_intro">{{* proj.works.length>0?proj.works[0].title:'敬請期待'}}</h2>
+                <p class="maintexts" id="proj{{id}}_text">{{* proj.works.length>0?proj.works[0].description:'敬請期待'}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="row row_white row_contact" id="contact">
+      <canvas id="background_contact"></canvas>
+      <div class="container-fluid min_div">
+        <div class="col-sm-12">
+          <h1>Contact</h1>
+        </div>
+        <div class="col-sm-12">
+          <div class="col-sm-2 col-lg-3"></div>
+          <form class="col-sm-8 col-lg-6 contactform">
+            <div class="fields col-sm-12">
+              <h3>姓名</h3>
+              <input id="reg_name" />
+              <h3>聯絡信箱</h3>
+              <input id="reg_email" />
+              <h3>聯絡電話</h3>
+              <input id="reg_phone" />
+              <h3>委託內容</h3>
+              <textarea id="reg_content"></textarea>
+              <div class="submitbtn">送出</div>
+            </div>
+          </form>
+          <div class="col-sm-2 col-lg-3"></div>
+        </div>
+      </div>
+    </section>
+    <section class="row row_black row_studio_info" id="studio_info">
+      <canvas id="background_studio_info"></canvas>
+      <div class="container-fluid min_div">
+        <div class="col-sm-12">
+          <h1>STUDIO INFO</h1>
+        </div>
+        <div class="col-sm-12">
+          <iframe class="col-xs-12 col-sm-6" src="{{studio_info.map_url}}" frameborder="0" style="border:0;" height="400px"
+            allowfullscreen="allowfullscreen"></iframe>
+          <div class="col-xs-12 col-sm-6">
+            <h2>Dyverse Studio 歧響音樂</h2>
+            <hr />
+            <div class="contact_info_group">
+              <div class="goldtext">PHONE-</div>
+              <div class="infotext">{{studio_info.phone}}</div>
+            </div>
+            <div class="contact_info_group">
+              <div class="goldtext"> TELE-</div>
+              <div class="infotext">{{studio_info.tele}}</div>
+            </div>
+            <div class="contact_info_group">
+              <div class="goldtext"> MAIL-</div>
+              <div class="infotext">{{studio_info.mail}}</div>
+            </div>
+            <div class="contact_info_group">
+              <div class="goldtext"> WEBSITE-</div>
+              <div class="infotext">{{studio_info.website}}</div>
+            </div>
+            <div class="contact_info_group">
+              <div class="goldtext"> TAXID-</div>
+              <div class="infotext">{{studio_info.taxid}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="row row_gold row_footer">
+      <div class="container-fluid min_div">
+        <div class="col-sm-12">
+          <div class="centerbox"> <img class="icon_sm" src="http://dyverse.studio/img/icon-02white.svg" />Dyverse
+            Studio 岐響音樂- dyverse.studio@gmail.com</div>
+          <!--h1 Footer-->
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
