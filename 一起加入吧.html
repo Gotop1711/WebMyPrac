@@ -1,0 +1,27 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>一起加入吧</title>
+</head>
+
+<body style="background-color: #282828;">
+
+  <h1 style="color: #1fc13a;">一起進入網頁開發的世界裡吧!</h1>
+
+  <script defer>
+    var invitation = function(){
+      var question = prompt('一起進入網頁開發的世界裡吧! (填 yes 或 no)' ); 
+
+      if( question.toLowerCase() == 'yes' ){
+        alert("太好了! 一起勇闖網路世界吧! 按下確認後, 你即將進入網頁開發的世界圖書館, 盡情享受吧")
+        window.location.href = 'https://developer.mozilla.org/zh-TW/docs/Web/Tutorials';
+      } else {
+        alert("太可惜了! 不如再決定一次吧!")
+        invitation();
+      }
+    }
+    invitation();
+  </script>
+
+</body>
+</html>

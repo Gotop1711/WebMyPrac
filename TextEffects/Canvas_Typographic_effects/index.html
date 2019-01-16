@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Typographic effects in canvas</title>
+  <!-- [article] : https://www.html5rocks.com/en/tutorials/canvas/texteffects/#toc-text-shadows -->
+  <link rel="stylesheet" href="https://kuoweihao.com/styles/flexTable.css">
+  <style>
+    
+    /* .flex_table .row {
+        -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    }  */
+
+    *{
+      padding: 0;
+      margin: 0;
+      text-decoration: none;
+    }
+
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    canvas{
+      background-color: #ccc;
+    }
+
+    .css_anaglyph{
+      font-size: 72px;
+      text-shadow: -0.06em 0 0 red, 0.06em 0 0 cyan;
+    }
+  </style>
+</head>
+<body>
+  <div class="flex_table padding_s">
+    <div class="row v_center h_center no-gutters">
+      <div class="col-12 col-sm-6">
+        <div class="css_anaglyph">CSS 3D</div>
+      </div>
+      <div class="col-12 col-sm-6">
+        <canvas id="anaglyph"></canvas>
+      </div>
+      <div class="col-12 col-sm-6">
+        <div id="emToPx"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

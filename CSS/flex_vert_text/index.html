@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>flex_vert_text</title>
+  <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+  <div class="wrapper">
+    <ul class="no-pseudo">
+      <li 
+      style="background-image: url(https://bigoven-res.cloudinary.com/image/upload/d_recipe-no-image.jpg,t_recipe-480/dessert-mile-high-turtle-pie-dd1969.jpg);"
+      >這是中文 AAAA</li>
+      <li 
+      style="background-image: url(https://bigoven-res.cloudinary.com/image/upload/w_300,c_fill,h_250/cherry-pie-fcd77d.jpg);"
+      >這是中文 BBB</li>
+      <li 
+      style="background-image: url(https://bigoven-res.cloudinary.com/image/upload/w_300,c_fill,h_250/no-pie-pumpkin-pie-1621105.jpg);"
+      >這是中文 CCCC</li>
+    </ul>
+    <ul class="pseudo">
+      <li data-text="這是中文 AAAA">
+        <img src="https://bigoven-res.cloudinary.com/image/upload/d_recipe-no-image.jpg,t_recipe-480/dessert-mile-high-turtle-pie-dd1969.jpg" />
+      </li>
+      <li data-text="這是中文 BBB">
+        <img src="https://bigoven-res.cloudinary.com/image/upload/w_300,c_fill,h_250/cherry-pie-fcd77d.jpg" />
+      </li>
+      <li data-text="這是中文 CCCC">
+        <img src="https://bigoven-res.cloudinary.com/image/upload/w_300,c_fill,h_250/no-pie-pumpkin-pie-1621105.jpg" />
+      </li>
+    </ul>
+  </div>
+</body>
+</html>
