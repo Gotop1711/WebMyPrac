@@ -1,0 +1,242 @@
+@import 'rules';
+
+
+a:focus{
+    outline: 0;
+}
+
+input,
+select,
+textarea {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border: 0;
+    outline: 0;
+    padding: 0;
+    margin: 0;
+}
+
+
+.app{
+    width: 90%;
+    max-width: 480px;
+    margin: 50px auto;
+    font-family: "Noto Sans TC","WenQuanYi Zen Hei","Heiti TC",Helvetica,"Microsoft YaHei","Microsoft JhengHei",Arial,sans-serif;
+}
+
+/* ------------------
+置頂
+------------------------- */
+
+.calendar-wrap{
+    width: 100%;
+    min-width: 320px;
+    max-width: 480px;
+    background: #fff;
+    text-align: center;
+    box-shadow: 2px 2px 24px 0 rgba($color: #000000, $alpha: .2);
+    border-radius:12px;
+    overflow: hidden; 
+    font-size: 0;
+}
+
+.calendar-head{
+    position: relative;
+    background: #db3d44;
+}
+
+
+.calendar-head-option{
+    height: 50px;
+    padding: 0 60px;
+    box-sizing: border-box;
+}
+
+
+.calendar-head-content{
+    display: inline-block;
+    cursor: pointer;
+
+    &:hover{
+        text-shadow: 1px 1px 1px rgba($color: #000000, $alpha: .5);
+    }
+
+    span{
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 50px;
+        letter-spacing: 2px;
+        color: #fff;
+        margin: 0 8px;
+        transition: .3s;
+    }
+}
+
+.calendar-btn{
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    cursor: pointer;
+
+    &:hover{
+        &::before{
+            opacity: 1;
+        }
+    }
+
+    &::before{
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        border-radius:50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: .6;
+        transition: .4s;
+    }
+
+    &::after{
+        content: '';
+        width: 6px;
+        height: 6px;
+        border-width: 2px 2px 0 0;
+        border-style:solid; 
+        border-color:#db3d44;
+        position: absolute;
+        top: 0;
+        left: 0; 
+        bottom: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    &.pre{
+        left: 16px;
+
+        &::after{
+            transform: translateX(2px) rotate(-135deg);
+        }
+    }
+
+    &.next{
+        right: 16px;
+
+        &::after{
+            transform: translateX(-2px) rotate(45deg);
+        }
+    }
+}
+
+.calendar-body{
+    padding: 8px;
+
+    ul{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    li{
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        font-size: 15px;
+        color: #333;
+
+        &.next,&.pre{
+            color: #eee;
+        }
+    
+        &.curry{
+            color: #db3d44;
+        }
+
+        &.choose{
+            color: #fff;
+
+            &::before{
+                transform: scale(1);
+                background: #db3d44;
+            }
+        }
+    }
+}
+
+.calendar-body-box{
+    li{
+
+        cursor: pointer;
+        z-index: 1;
+
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            border-radius: 50%;
+            z-index: -1;
+            transform: scale(0);
+            transition: .4s;
+            box-shadow: 0 0 0 1px #db3d44;
+        }
+
+        &:hover{
+            &::before{
+                transform: scale(1);
+            }
+        }
+
+       
+    }
+}
+
+
+.calendar-vue-day_type{
+    li{
+        width: 14.28%;
+        height: 42px;
+        line-height: 42px;
+    }
+
+    .calendar-body-box{
+
+        li{
+            &::before{
+                width: 36px;
+                height: 36px;
+            }
+        }
+        
+    }
+}
+
+.calendar-vue-month_type{
+    li{
+        width: 33.3%;
+        height: 73.5px;
+        line-height: 73.5px;
+    }
+
+    .calendar-body-box{
+        li{
+            &::before{
+                width: 56px;
+                height: 56px;
+            }
+        }
+    }
+}
+
+.calendar-vue-year_type{
+    @extend .calendar-vue-month_type
+}
